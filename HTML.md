@@ -1,4 +1,4 @@
-## HTML reminders
+## HTML 
 > - Edits
 > - Lists
 > - Image and video 
