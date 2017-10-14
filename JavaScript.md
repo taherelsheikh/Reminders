@@ -3,6 +3,7 @@
 > - Methods
 > - Libraries
 > - Comments  
+> - Variables
 
 Data Types
 
@@ -43,8 +44,6 @@ Multi
 line comment 
 */
 ```
-## JavaScript 
-> - Variables
 
 Variables 
 > - const
