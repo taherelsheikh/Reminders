@@ -16,7 +16,7 @@
   
 
 
-Data Types
+#### Data Types
 
 ```javascript
 console.log('JavaScript');
@@ -25,7 +25,7 @@ console.log(true);
 console.log(null);
 ```
 
-Methods
+#### Methods
 > Methods have to have an instance for them to work 
 
 ```javascript
@@ -36,7 +36,7 @@ console.log('    Remove whitespace   '.trim());
 
 ```
 
-Libraries
+#### Libraries
 > Libraries dont have to have an instance for them to work 
 
 ```javascript
@@ -48,7 +48,7 @@ console.log(Math.random() * 50);
 console.log(Number.isInteger(2017))
 ```
 
-Comments
+#### Comments
 
 ```javascript
 // Single line
@@ -58,7 +58,7 @@ line comment
 */
 ```
 
-Variables 
+#### Variables 
 > - const
 > - let
 
@@ -79,7 +79,7 @@ let taher = false;
 taher = true;
 ```
 
-Assignment 
+#### Assignment 
 
 ```javascript
 let x = 4;
@@ -92,7 +92,7 @@ x ++;
 x --;
 ```
 
-String Interpolation
+#### String Interpolation
 > Use ` which is located next to the one when using string interpolation
 
 ```javascript 
@@ -104,7 +104,7 @@ console.log(`my name is ${myName}.
 My faviorite city is ${myCity}`);
 ```
 
-if / else
+#### if / else
 
 ```javascript
 let isSoccerFan = true;
@@ -116,7 +116,7 @@ if (isSoccerFan == true) {
 };
 ```
 
-Comparison
+#### Comparison
 > - '==='
 > - '!moonPhase' this will give us false 
 > - '!=='
@@ -131,7 +131,7 @@ if (moonPhase === 'full') {
 }
 ```
 
-Logical Operators
+#### Logical Operators
 > - "&&" is like and 
 > - "||" is like or 
 
@@ -141,7 +141,7 @@ pedestrians === false) {
 }
 ```
 
-Switch Statment 
+#### Switch Statment 
 > - used instead of if and else statement cuz they're easier to read 
 > - 'default' used at the end to check the truthfulness   
 
@@ -161,7 +161,7 @@ switch (moonPhase) {
 }
 ```
 
-Ternary Operator
+#### Ternary Operator
 > '?' and ':' are used instead of if and else statment. Its easier for other people to read your code
 
 ```javascript 
