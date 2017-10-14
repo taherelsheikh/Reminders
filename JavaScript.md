@@ -1,11 +1,15 @@
 ## JavaScript 
-> - Data types
-> - Methods
-> - Libraries
-> - Comments  
-> - Variables
-> - Assigment 
-> - String Interpolation
+> 
+ - Data types
+ - Methods
+ - Libraries
+ - Comments  
+ - Variables
+ - Assigment 
+ - String Interpolation
+ - if / else 
+  
+
 
 Data Types
 
@@ -89,4 +93,16 @@ let myCity = 'Dubai';
 
 console.log(`my name is ${myName}. 
 My faviorite city is ${myCity}`);
+```
+
+if / else
+
+```javascript
+let isSoccerFan = true;
+
+if (isSoccerFan == true) {
+  console.log('Goal!');
+} else {
+  console.log('No goal!')
+};
 ```
