@@ -15,6 +15,7 @@ console.log(null);
 ```
 
 Methods
+> methods have to have an instance for them to work 
 
 ```javascript
 console.log('Codecademy'.length); 
@@ -25,6 +26,7 @@ console.log('    Remove whitespace   '.trim());
 ```
 
 Libraries
+> libraries dont have to have an instance for them to work 
 
 ```javascript
 // Math.random gives number between 0 and 1
