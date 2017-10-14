@@ -12,6 +12,8 @@
  - Logical Operators
  - Switch statment
  - Ternary Operator
+ - Functions
+ - Scope 
 
   
 
@@ -170,4 +172,124 @@ let favoritePhrase = 'Love That!';
 favoritePhrase === 'Love That!' ?
  console.log('I love that!') : 
  console.log("I don't love that!");
+```
+<br>
+
+
+### Functions 
+> - Simple Function
+> - Functions with argumnets
+> - Pizza Function
+> - Function Declaration 
+> - Function Experssion
+> - Arrow Functions 
+
+
+##### Simple function 
+
+```javascript
+const takeOrder = () => {
+  console.log('Order: pizza');
+};
+
+takeOrder()
+```
+
+##### Functions with arguments
+
+```javascript
+const takeOrder = (topping) => {
+  console.log(`Order: pizza topped with ${topping}`);
+};
+
+// Mushrooms is known as an argumnet 
+takeOrder("Mushrooms")
+```
+
+##### Pizza Function 
+
+```javascript 
+let orderCount = 0 
+const takeOrder = (topping, crustType) => {
+  orderCount ++ ;
+  console.log(`Order: ${crustType} pizza topped with ${topping}`);
+};
+
+const getSubTotal = (itemCount)  => {
+  return itemCount * 7.5
+}
+
+takeOrder('mushroom', 'thin crust');
+takeOrder('spinach', 'whole wheat');
+takeOrder('pepperoni', 'brooklyn style');
+
+console.log(getSubTotal(orderCount));
+```
+			
+##### Function Declaration
+> Doesnt end with a semi-column  
+
+```javascript 
+function isGreaterThan (numberOne, numberTwo) {
+  if (numberOne > numberTwo)  {
+    return true;
+  }  else {
+    return false;
+  }
+}
+
+isGreaterThan(1, 0);
+```
+##### Function Experations
+> End with a semi-column  
+
+```javascript 
+const isGreaterThan = (numberOne, numberTwo) => {
+  if (numberOne > numberTwo)  {
+    return true;
+  }  else {
+    return false;
+  }
+};
+
+isGreaterThan(1, 0);
+```
+
+##### Arrow Functions  
+
+```javascript 
+const volumeOfSphere = diameter => {
+   (1/6) * Math.PI * diameter * diameter * diameter;
+}
+
+console.log('The volume of a sphere is ' + volumeOfSphere(10) + ' cubic centimeters');
+```
+<br>
+
+### Scope 
+> - Global Scope 
+> - Block Scope 
+
+##### Global Scope 
+> Global Scope refers to variables that are accessible to every part of the program.
+
+
+
+##### Block Scope 
+> - Block Scope refers to variables that are accessible only within the block they are defined.
+> - The below code prints "Northern Lights" "Moonlight"
+
+```javascript
+const visibleLightWaves =() => {
+  let lightWaves = 'Moonlight';
+  let region = 'The Arctic';
+  
+  if (region === 'The Arctic') {
+    let lightWaves = 'Northern Lights';
+    console.log(lightWaves);
+  } 
+  console.log(lightWaves);
+};
+
+visibleLightWaves();
 ```
