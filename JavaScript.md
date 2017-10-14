@@ -15,6 +15,7 @@
  - Functions
  - Scope 
  - Arrays
+ - Loops
 
   
 
@@ -342,3 +343,28 @@ newYearsResolutions.pop();
  // this would work  
  condiments = ['Sriracha'];
  ```
+ <br>
+ 
+### Loops
+> - for 
+> - while
+
+##### for
+
+```javascript
+let vacationSpots = ['Mozambique', 'Thailand', 'Bolivia'];
+
+for (let vacationSpotIndex = 0; 
+vacationSpotIndex < vacationSpots.length; 
+vacationSpotIndex++) {
+  console.log('I would love to visit ' + 
+  vacationSpots[vacationSpotIndex]);
+}
+```
+##### while 
+
+```javascript
+while (condition) {
+  // code block that loops until condition is false
+}
+```
