@@ -14,6 +14,7 @@
  - Ternary Operator
  - Functions
  - Scope 
+ - Arrays
 
   
 
@@ -293,3 +294,51 @@ const visibleLightWaves =() => {
 
 visibleLightWaves();
 ```
+<br>
+
+### Arrays
+> - Create an Array
+> - Update Array
+> - Array Methods [click here for more](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+>  - push ==== append
+>  - pop 
+> - let and const arrays
+
+
+##### Create an Array
+```javascript
+let newYearsResolutions = ['tennis', 'job', 'website'];
+```
+
+##### Update Array
+```javascript
+let newYearsResolutions = ['tennis', 'job', 'website'];
+newYearsResolutions[1] = 'Learn a new language';
+```
+##### Push
+> - Push if similar to append in Python 
+
+```javascript 
+newYearsResolutions.push("book", "cook");
+```
+
+##### Pop
+
+```javascript
+newYearsResolutions.pop();
+
+```
+
+##### let and const
+ 
+ > let and const are the same when creating an array but const cannot be reassignedLashan 
+ 
+ ```javascript
+ const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
+ // this wont work 
+ condiments = ['Sriracha'];
+ let utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
+ // this would work  
+ condiments = ['Sriracha'];
+ ```
