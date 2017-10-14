@@ -2,7 +2,7 @@
 > - Data types
 > - Methods
 > - Libraries
-> - Comments 
+> - Comments  
 
 Data Types
 
@@ -43,3 +43,21 @@ Multi
 line comment 
 */
 ```
+
+> - Variables
+
+Variables 
+> - const
+> - let
+
+const cant be reassigned 
+```javascript
+const taher = 'boy';
+```
+
+let can be reassigned
+```javascript
+let taher = false;
+taher = true;
+```
+
