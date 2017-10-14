@@ -8,6 +8,11 @@
  - Assigment 
  - String Interpolation
  - if / else 
+ - Comparison
+ - Logical Operators
+ - Switch statment
+ - Ternary Operator
+
   
 
 
@@ -61,12 +66,16 @@ const cant be reassigned
 
 ```javascript
 const taher = 'boy';
+// This wouldnt work 
+taher = 'girl';
+
 ```
 
 let can be reassigned
 
 ```javascript
 let taher = false;
+// This would work 
 taher = true;
 ```
 
@@ -105,4 +114,60 @@ if (isSoccerFan == true) {
 } else {
   console.log('No goal!')
 };
+```
+
+Comparison
+> - '==='
+> - '!moonPhase' this will give us false 
+> - '!=='
+
+```javascript
+let moonPhase = 'full';
+
+if (moonPhase === 'full') {
+  console.log('Howl!');
+} else {
+  console.log('swear I am not a werewolf');
+}
+```
+
+Logical Operators
+> - "&&" is like and 
+> - "||" is like or 
+
+```javascript 
+if (stopLight === 'green' && 
+pedestrians === false) {
+}
+```
+
+Switch Statment 
+> - used instead of if and else statement cuz they're easier to read 
+> - 'default' used at the end to check the truthfulness   
+
+```javascript
+let moonPhase = 'full';
+
+switch (moonPhase) {
+  case 'full':
+    console.log('Howl!');
+    break;
+  case 'mostly full':
+    console.log('Arms and legs are getting hairier');
+    break;
+  default: 
+    console.log('Invalid moon phase');
+    break;
+}
+```
+
+Ternary Operator
+> '?' and ':' are used instead of if and else statment. Its easier for other people to read your code
+
+```javascript 
+let favoritePhrase = 'Love That!';
+
+favoritePhrase === 'Love That!' ?
+ console.log('I love that!') : 
+ console.log("I don't love that!");
 ```
