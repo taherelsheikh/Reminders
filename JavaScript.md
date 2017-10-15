@@ -1,6 +1,6 @@
-## JavaScript 
-> 
- - Data types
+# JavaScript 
+
+>  - Data types
  - Methods
  - Libraries
  - Comments  
@@ -16,6 +16,7 @@
  - Scope 
  - Arrays
  - Loops
+ - Iterators
 
   
 
@@ -368,3 +369,73 @@ while (condition) {
   // code block that loops until condition is false
 }
 ```
+
+### Iterators - [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+> - .forEach()
+> - .map()
+> - .filter()
+> - Other examples
+
+
+##### .forEach()
+> Will execute the same code on each element of an array.
+
+```javascript
+let fruits = ['mango', 'papaya', 'pineapple', 'apple'];
+
+// Method 1
+fruits.forEach(function(fruitItem) {
+  console.log(`I want to eat a ${fruitItem}`)
+               });
+// Method 2
+fruits.forEach(fruitItem => console.log(
+`- ${fruitItem}`));
+```
+
+##### .map()
+> Use .map() as opposed to forEach() if you want to change the array  
+
+Here the code divides each element by 100 and puts it in a array smallNumbers
+
+```javascript 
+let bigNumbers = [100, 200, 300, 400, 500];
+let smallNumbers = bigNumbers.map(num => num/100);
+
+```
+
+##### .filter()
+```javascript
+// Method 1 - an array of all elements with a length > 7
+let longFavoriteWords = favoriteWords.filter(
+word => word.length > 7);
+// Method 2
+let longFavoriteWords = favoriteWords.filter(function(word) {
+  return word.length > 7;
+});
+```
+
+##### Other Examples
+```javascript
+let cities = ['Nashville', 'Charlotte', 'Asheville', 'Austin', 'Boulder'];
+
+let nums = [1, 50, 75, 200, 350, 525, 1000];
+
+//  Choose a method that will return undefined
+cities.forEach(city => console.log(`Have 
+you visited ${city}`));
+
+// Choose a method that will return a new array
+let longCities = cities.filter(city => city.length > 7);
+
+// Choose a method that will return a new array
+let smallerNums = nums.map(num => num - 5);
+
+// Choose a method that will return a boolean value
+nums.every(num => num < 0);
+
+```
+
+
+
+
+
