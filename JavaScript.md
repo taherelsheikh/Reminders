@@ -6,7 +6,7 @@
 - [Variables](#variables)
 - [Assigment](#assignment) 
 - [String Interpolation](#string-interpolation)
-- [if / else](#if-else) 
+- [Conditional](#conditional) 
 - [Comparison](#comparison)
 - [Logical Operators](#logical-operators)
 - [Switch statment](#switch-statment)
@@ -15,7 +15,7 @@
 - [Scope](#scope) 
 - [Arrays](#arrays)
 - [Loops](#loops)
-- [Iterators](#Iterators-more-info)
+- [Iterators](#iterators)
 
   
 
@@ -108,7 +108,7 @@ console.log(`my name is ${myName}.
 My faviorite city is ${myCity}`);
 ```
 
-#### if / else
+#### Conditional
 
 ```javascript
 let isSoccerFan = true;
