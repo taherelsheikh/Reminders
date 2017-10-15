@@ -1,7 +1,7 @@
-## CSS
-> - Style 
-> - Style Tag
-> - Link Tag
+# CSS
+> - [Style](#style) 
+> - [Style Tag](#style-tag)
+> - [Link Tag](#link-tag)
 > - Selector using class
 > - Add two classes
 > - !important
@@ -9,7 +9,7 @@
 > - CSS VISUAL RULES
 
 
-#### 1 - Style 
+### style 
 
 ```html
   <p style="color: red; font-size: 20px; font-family: Arial;" >
@@ -18,7 +18,7 @@ Taher Elsheikh
 
 ```
 
-#### 2 - Style tag 
+### Style tag 
 
 ```html
 <head>
@@ -27,7 +27,7 @@ Taher Elsheikh
 </head>
 ```
 
-#### 3 - Link Tag
+### Link Tag
 > Seperate the HTML and CSS code into two files and link them using the link tag
 
 CSS in Style file 
@@ -46,7 +46,7 @@ HTML in index file
 <link href='./style.css' type='text/css' rel='stylesheet' >
 ```
 
-#### 4 - Selector using Class
+### 4 - Selector using Class
 CSS file
 
 ```html
@@ -59,13 +59,13 @@ HTML file
 <p class="title">Sole Shoe Company</p>
 ```
 
-#### 5 - Add two classes
+### 5 - Add two classes
 
 ```html
 <h1 class="title uppercase">Top Vacation Spots</h1>
 ```
 
-#### 6 - !important
+### 6 - !important
 > !important overrides any style no matter how specific they are. Not advised to use
 
 CSS file
@@ -76,7 +76,7 @@ h5 {
 }
 ```
 
-#### 7 - Two Selectors - h5 and p 
+### 7 - Two Selectors - h5 and p 
 CSS file
 
 ```html
@@ -84,7 +84,7 @@ h5, p {font-family: Georgia;}
 ```
 
 
-#### 8 - CSS VISUAL RULES
+### 8 - CSS VISUAL RULES
 -  **font-size** controls the size of text displayed.
 - **font-weight** defines how thin or thick text is displayed.
 - The **text-align** property places text in the left, right, or center of its parent container.
@@ -92,7 +92,7 @@ h5, p {font-family: Georgia;}
 - CSS can make an element transparent with the **opacity** property.
 - CSS can also set the background of an element to an image with the **background-image** property. 
 
-##### Examples
+#### Examples
 - font-family: 'Playfair Display', serif;
 - font-size: 14px;
 - font-style: italic;
