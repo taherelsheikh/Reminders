@@ -6,7 +6,7 @@
 - [Variables](#variables)
 - [Assigment](#assignment) 
 - [String Interpolation](#string-interpolation)
-- [if / else](#if-/-else) 
+- [if / else](#if-else) 
 - [Comparison](#comparison)
 - [Logical Operators](#logical-operators)
 - [Switch statment](#switch-statment)
@@ -15,7 +15,7 @@
 - [Scope](#scope) 
 - [Arrays](#arrays)
 - [Loops](#loops)
-- [Iterators](#iterators)
+- [Iterators](#Iterators-more-info)
 
   
 
