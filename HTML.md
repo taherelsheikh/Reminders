@@ -1,12 +1,12 @@
 ## HTML 
-> - Edits
-> - Lists
-> - Image and video 
-> - Hyperlinks
-> - Link to another HTML page
-> - Link to id in same page 
+> - [Edits](#edits)
+> - [Lists](#lists)
+> - [Image and video](#image-and-video) 
+> - [Hyperlinks](#hyperlinks)
+> - [Link to another HTML page](#link-to-another-html-page)
+> - [Link to id in same page](#link-to-id-in-same-page)
 
-#### 1 - Edits
+#### Edits
 > - italic = em
 > - bold = strong 
 
@@ -17,7 +17,7 @@
 <br/>
 ```
 
-#### 2 - Lists 
+#### Lists 
 > - ordered = ol
 > - unordered = ul
 
@@ -30,7 +30,7 @@
     </ol>
 ```
 
-#### 3 - Image and Video 
+#### Image and Video 
 
 ```html
  <img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/web101-image_brownbear.jpg" />
@@ -39,7 +39,7 @@
  height="240" width="320" controls>Video not supported</video>
 ```
 
-#### 4 - Hyperlinks
+#### Hyperlinks
 > _blank opens the link in a new window
 
 ```html
@@ -51,14 +51,14 @@
 
 ```
 
-#### 5 - Link to another HTML page
+#### Link to another HTML page
 > './' indicates current directory 
 
 ```html
   <a href ='./index.html'>Brown Bear</a>
   <a href='./aboutme.html'>About Me</a>
 ```
-#### 6 - Link to id in same page 
+#### Link to id in same page 
 
 ```html
 <li><a href='#habitat'> Habitat</a></li>
