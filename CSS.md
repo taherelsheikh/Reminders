@@ -4,8 +4,8 @@
 > - [Link Tag](#link-tag)
 > - [Selector using class](#selector-using-class)
 > - [Add two classes](#add-two-classes)
-> - [!important](#!important)
-> - [Two selectors](#two-selectors-h5-and-p)
+> - [!important](#important)
+> - [Two selectors](#two-selectors)
 > - [CSS VISUAL RULES](#css-visual-rules)
 
 
@@ -65,7 +65,7 @@ HTML file
 <h1 class="title uppercase">Top Vacation Spots</h1>
 ```
 
-### !important
+### important
 > !important overrides any style no matter how specific they are. Not advised to use
 
 CSS file
@@ -76,7 +76,7 @@ h5 {
 }
 ```
 
-### Two Selectors - h5 and p 
+### Two Selectors
 CSS file
 
 ```html
