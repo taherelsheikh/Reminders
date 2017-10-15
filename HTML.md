@@ -1,4 +1,4 @@
-## HTML 
+# HTML 
 > - [Edits](#edits)
 > - [Lists](#lists)
 > - [Image and video](#image-and-video) 
