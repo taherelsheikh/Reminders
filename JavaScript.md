@@ -466,7 +466,7 @@ When an object has a function as a value. The function is then called a method
 // Method 1
 let object = {
     sayHello : () => {
-         return 'Hello, there
+         return 'Hello, there'
     }
 };
 console.log(object.sayHello);
@@ -474,7 +474,7 @@ console.log(object.sayHello);
 // Method 2
 let object = {
     sayHello() {
-         return 'Hello, there
+         return 'Hello, there'
     }
 };
 console.log(object.sayHello);
