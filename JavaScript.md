@@ -369,7 +369,8 @@ while (condition) {
 }
 ```
 
-### Iterators - [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+### Iterators
+[more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 > - .forEach()
 > - .map()
 > - .filter()
