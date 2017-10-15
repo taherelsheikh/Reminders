@@ -16,6 +16,7 @@
 - [Arrays](#arrays)
 - [Loops](#loops)
 - [Iterators](#iterators)
+- [Objects](#objects)
 
   
 
@@ -63,8 +64,8 @@ line comment
 ```
 
 #### Variables 
-> - const
-> - let
+ - const
+- let
 
 const cant be reassigned 
 
@@ -97,7 +98,7 @@ x --;
 ```
 
 #### String Interpolation
-> Use ` which is located next to the one when using string interpolation
+ Use ` which is located next to the one when using string interpolation
 
 ```javascript 
 let myName = 'Taher';
@@ -136,8 +137,8 @@ if (moonPhase === 'full') {
 ```
 
 #### Logical Operators
-> - "&&" is like and 
-> - "||" is like or 
+ - "&&" is like and 
+ - "||" is like or 
 
 ```javascript 
 if (stopLight === 'green' && 
@@ -146,8 +147,8 @@ pedestrians === false) {
 ```
 
 #### Switch Statment 
-> - used instead of if and else statement cuz they're easier to read 
-> - 'default' used at the end to check the truthfulness   
+ - used instead of if and else statement cuz they're easier to read 
+ - 'default' used at the end to check the truthfulness   
 
 ```javascript
 let moonPhase = 'full';
@@ -166,7 +167,7 @@ switch (moonPhase) {
 ```
 
 #### Ternary Operator
-> '?' and ':' are used instead of if and else statment. Its easier for other people to read your code
+ '?' and ':' are used instead of if and else statment. Its easier for other people to read your code
 
 ```javascript 
 let favoritePhrase = 'Love That!';
@@ -229,7 +230,7 @@ console.log(getSubTotal(orderCount));
 ```
 			
 ##### Function Declaration
-> Doesnt end with a semi-column  
+ Doesnt end with a semi-column  
 
 ```javascript 
 function isGreaterThan (numberOne, numberTwo) {
@@ -243,7 +244,7 @@ function isGreaterThan (numberOne, numberTwo) {
 isGreaterThan(1, 0);
 ```
 ##### Function Experations
-> End with a semi-column  
+ End with a semi-column  
 
 ```javascript 
 const isGreaterThan = (numberOne, numberTwo) => {
@@ -273,13 +274,13 @@ console.log('The volume of a sphere is ' + volumeOfSphere(10) + ' cubic centimet
 > - Block Scope 
 
 ##### Global Scope 
-> Global Scope refers to variables that are accessible to every part of the program.
+ Global Scope refers to variables that are accessible to every part of the program.
 
 
 
 ##### Block Scope 
-> - Block Scope refers to variables that are accessible only within the block they are defined.
-> - The below code prints "Northern Lights" "Moonlight"
+ - Block Scope refers to variables that are accessible only within the block they are defined.
+ - The below code prints "Northern Lights" "Moonlight"
 
 ```javascript
 const visibleLightWaves =() => {
@@ -318,7 +319,7 @@ let newYearsResolutions = ['tennis', 'job', 'website'];
 newYearsResolutions[1] = 'Learn a new language';
 ```
 ##### Push
-> - Push if similar to append in Python 
+push is similar to append in Python 
 
 ```javascript 
 newYearsResolutions.push("book", "cook");
@@ -333,7 +334,7 @@ newYearsResolutions.pop();
 
 ##### let and const
  
- > let and const are the same when creating an array but const cannot be reassignedLashan 
+let and const are the same when creating an array but const cannot be reassignedLashan 
  
  ```javascript
  const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
@@ -378,7 +379,7 @@ while (condition) {
 
 
 ##### .forEach()
-> Will execute the same code on each element of an array.
+This will execute the same code on each element of an array.
 
 ```javascript
 let fruits = ['mango', 'papaya', 'pineapple', 'apple'];
@@ -393,9 +394,9 @@ fruits.forEach(fruitItem => console.log(
 ```
 
 ##### .map()
-> Use .map() as opposed to forEach() if you want to change the array  
+- Use .map() as opposed to forEach() if you want to change the array  
 
-Here the code divides each element by 100 and puts it in a array smallNumbers
+- Here the code divides each element by 100 and puts it in a array smallNumbers
 
 ```javascript 
 let bigNumbers = [100, 200, 300, 400, 500];
@@ -434,8 +435,119 @@ let smallerNums = nums.map(num => num - 5);
 nums.every(num => num < 0);
 
 ```
+<br>
+
+### Objects
+Is like dictionaries in Python so it has a key-value pairs but it can also contain functions
+> - Simple object
+> - Methods
+> - this
+> - set
+> - get
 
 
+##### Simple object
 
+```javascript
+let person = {
+  name:'Taher',
+  age: 26
+};
+// Method 1 
+console.log(person.name);
+// Method 2
+console.log(person['name']);
+```
 
+##### Methods
+When an object has a function as a value. The function is then called a method
 
+```javascript
+// Method 1
+let object = {
+    sayHello : () => {
+         return 'Hello, there
+    }
+};
+console.log(object.sayHello);
+
+// Method 2
+let object = {
+    sayHello() {
+         return 'Hello, there
+    }
+};
+console.log(object.sayHello);
+
+```
+
+##### this
+'this' solves scope issues when dealining with values inside of an object <br>
+example 1
+
+```javascript
+// this is correct 
+let object = {
+    name: 'Taher'
+    sayHello() {return `Hello, my name is ${this.name}`}
+};
+
+// This will give an error
+let object = {
+    name: 'Taher'
+    sayHello() {return `Hello, my name is ${name}`}
+};
+```
+example 2
+
+```javascript
+let person = {
+    name: 'Taher'
+    sayHello() {return `Hello, my name is ${name}`}
+};
+
+let friend = {
+  name: 'karim'
+};
+// This would work 
+friend.sayHello = person.sayHello;
+
+console.log(friend.sayHello());
+```
+
+##### set
+Getter and setter methods allow you to process data before accessing or setting property values
+
+```javascript
+let person = {
+  _name: 'Lu Xun',
+  _age: 137,
+  
+  set age(ageIn) {
+    if (typeof ageIn === 'number') {
+      this._age = ageIn;
+    }
+    else {
+      console.log('Invalid input');
+      return 'Invalid input';
+    }
+  }
+
+};
+person.age = 10;
+```
+
+##### get
+get is preffered to set beacuse you can do additional processing as opposed to just setting 
+
+```javascript 
+let person = {
+  _name: 'Lu Xun',
+  _age: 137,
+   get age() {
+  return `${this._name} is ${this._age} years old.`;
+  }
+};
+
+console.log(person.age);
+```
