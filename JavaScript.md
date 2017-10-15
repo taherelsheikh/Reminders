@@ -1,5 +1,5 @@
 # JavaScript 
-- [Data types](#### Data-Types)
+- [Data types](####data-types)
  - Methods
 - Libraries
 - Comments  
