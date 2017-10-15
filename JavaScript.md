@@ -1,6 +1,6 @@
 # JavaScript 
- > - Data types
-- Methods
+- Data types
+ - Methods
 - Libraries
 - Comments  
 - Variables
