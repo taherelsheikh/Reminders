@@ -1,21 +1,21 @@
 # JavaScript 
 - [Data types](#data-types)
- - Methods
-- Libraries
-- Comments  
-- Variables
-- Assigment 
-- String Interpolation
-- if / else 
-- Comparison
-- Logical Operators
-- Switch statment
-- Ternary Operator
-- Functions
-- Scope 
-- Arrays
-- Loops
-- Iterators
+- [Methods](#methods)
+- [Libraries](#libraries)
+- [Comments](#comments)  
+- [Variables](#variables)
+- [Assigment](#assignment) 
+- [String Interpolation](#string-interpolation)
+- [if / else](#if-/-else) 
+- [Comparison](#comparison)
+- [Logical Operators](#logical-operators)
+- [Switch statment](#switch-statment)
+- [Ternary Operator](#ternary-operator)
+- [Functions](#functions)
+- [Scope](#scope) 
+- [Arrays](#arrays)
+- [Loops](#loops)
+- [Iterators](#iterators)
 
   
 
