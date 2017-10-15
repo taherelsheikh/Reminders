@@ -1,22 +1,21 @@
 # JavaScript 
-
->  - Data types
- - Methods
- - Libraries
- - Comments  
- - Variables
- - Assigment 
- - String Interpolation
- - if / else 
- - Comparison
- - Logical Operators
- - Switch statment
- - Ternary Operator
- - Functions
- - Scope 
- - Arrays
- - Loops
- - Iterators
+ > - Data types
+- Methods
+- Libraries
+- Comments  
+- Variables
+- Assigment 
+- String Interpolation
+- if / else 
+- Comparison
+- Logical Operators
+- Switch statment
+- Ternary Operator
+- Functions
+- Scope 
+- Arrays
+- Loops
+- Iterators
 
   
 
