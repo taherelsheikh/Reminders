@@ -21,7 +21,7 @@
 - [Browser Compatiblity](#browser-compatiblity)
 - [Module](#module)
 
-===
+
   
 <br>
 
@@ -70,6 +70,8 @@ line comment
 */
 ```
 <br>
+
+***
 
 #### Variables 
  - const
@@ -193,6 +195,8 @@ favoritePhrase === 'Love That!' ?
 ```
 <br>
 
+***
+
 
 ### Functions 
 > - Simple Function
@@ -313,6 +317,8 @@ visibleLightWaves();
 ```
 <br>
 
+***
+
 ### Arrays
 > - Create an Array
 > - Update Array
@@ -386,6 +392,8 @@ while (condition) {
 ```
 <br>
 
+***
+
 ### Iterators
 [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 > - .forEach()
@@ -452,6 +460,8 @@ nums.every(num => num < 0);
 
 ```
 <br>
+
+***
 
 ### Objects
 Is like dictionaries in Python so it has a key-value pairs but it can also contain functions
@@ -568,7 +578,13 @@ let person = {
 
 console.log(person.age);
 ```
+***
+
 <br>
+
+***
+
+
 ### Classes
 - Introduction
 - Constructor
@@ -827,6 +843,8 @@ console.log(nurseOlynyk.certifications);
 - caniuse.com is used to check if a function is available in certain browsers 
 
 <br>
+
+***
 
 ### Module
 
