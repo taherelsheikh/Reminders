@@ -826,7 +826,9 @@ console.log(nurseOlynyk.certifications);
 - caniuse.com is used to check if a function is available in certain browsers 
 
 <br>
+
 ### Module
+
 Modules are reusable pieces of code that can be exported from one program and imported for use in another program
 > - module.exports
 > - require()
