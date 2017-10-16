@@ -17,9 +17,12 @@
 - [Loops](#loops)
 - [Iterators](#iterators)
 - [Objects](#objects)
+- [Classes](#classes)
+- [Browser Compatiblity](#browser-compatiblity)
+- [Module](#module)
 
   
-
+<br>
 
 #### Data Types
 
@@ -29,6 +32,7 @@ console.log(33.7);
 console.log(true);
 console.log(null);
 ```
+<br>
 
 #### Methods
 > Methods have to have an instance for them to work 
@@ -40,6 +44,7 @@ console.log('Codecademy'.toUpperCase());
 console.log('    Remove whitespace   '.trim()); 
 
 ```
+<br>
 
 #### Libraries
 > Libraries dont have to have an instance for them to work 
@@ -52,6 +57,7 @@ console.log(Math.random() * 50);
 // Gives true or false 
 console.log(Number.isInteger(2017))
 ```
+<br>
 
 #### Comments
 
@@ -62,6 +68,7 @@ Multi
 line comment 
 */
 ```
+<br>
 
 #### Variables 
  - const
@@ -83,6 +90,7 @@ let taher = false;
 // This would work 
 taher = true;
 ```
+<br>
 
 #### Assignment 
 
@@ -96,6 +104,7 @@ x ++;
 // Subtract by 1
 x --;
 ```
+<br>
 
 #### String Interpolation
  Use ` which is located next to the one when using string interpolation
@@ -108,6 +117,7 @@ let myCity = 'Dubai';
 console.log(`my name is ${myName}. 
 My faviorite city is ${myCity}`);
 ```
+<br>
 
 #### Conditional
 
@@ -120,6 +130,7 @@ if (isSoccerFan == true) {
   console.log('No goal!')
 };
 ```
+<br>
 
 #### Comparison
 > - '==='
@@ -135,6 +146,7 @@ if (moonPhase === 'full') {
   console.log('swear I am not a werewolf');
 }
 ```
+<br>
 
 #### Logical Operators
  - "&&" is like and 
@@ -145,6 +157,7 @@ if (stopLight === 'green' &&
 pedestrians === false) {
 }
 ```
+<br>
 
 #### Switch Statment 
  - used instead of if and else statement cuz they're easier to read 
@@ -165,6 +178,7 @@ switch (moonPhase) {
     break;
 }
 ```
+<br>
 
 #### Ternary Operator
  '?' and ':' are used instead of if and else statment. Its easier for other people to read your code
@@ -369,6 +383,7 @@ while (condition) {
   // code block that loops until condition is false
 }
 ```
+<br>
 
 ### Iterators
 [more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
@@ -444,6 +459,7 @@ Is like dictionaries in Python so it has a key-value pairs but it can also conta
 > - this
 > - set
 > - get
+> - inheritance
 
 
 ##### Simple object
@@ -551,3 +567,310 @@ let person = {
 
 console.log(person.age);
 ```
+<br>
+### Classes
+- Introduction
+- Constructor
+- Instance
+- Another Example
+- Static
+- Putting it all together
+
+##### intorduction
+
+```javascript
+class Dog {
+  constructor(name) {
+    this._name = name;
+    this._behavior = 0;
+  }
+
+  get name() {
+    return this._name;
+  }
+  get behavior() {
+    return this._behavior;
+  }   
+
+  incrementBehavior() {
+    this._behavior ++;
+  }
+}
+
+const halley = new Dog('Halley');
+console.log(halley.name); // Print name value to console
+console.log(halley.behavior); // Print behavior value to console
+halley.incrementBehavior(); // Add one to behavior
+console.log(halley.name); // Print name value to console
+console.log(halley.behavior); // Print behavior value to
+```
+##### Constructor
+JavaScript calls the constructor() method every time it creates a new instance of a class.
+
+```javascript
+class Surgeon {
+  constructor(name, department) {
+    this.name = name;
+    this.department = department;
+     }
+}
+```
+
+##### Instance
+Creating an instance is done by using the 'new' function
+
+```javascript
+const surgeonCurry = new Surgeon('Curry', 
+'Cardiovascular');
+```
+
+##### Methods
+methods in an classes are very similar to methods in objects but we dont use ','
+
+```javascript
+class Surgeon {
+  constructor(name, department) {
+    this._name = name;
+    this._department = department;
+    this._remainingVacationDays = 20;
+    }
+  // get statment
+  get name() {
+    return this._name;
+  }
+  get department() {
+    return this._department;
+  }
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  // Method statment
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays = this._remainingVacationDays - daysOff;
+  } 
+}
+
+const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
+const surgeonDurant = new Surgeon('Durant', 'Orthopedics');
+```
+##### Method Calls
+ 
+```javascript
+ class Surgeon {
+  constructor(name, department) {
+    this._name = name;
+    this._department = department;
+    this._remainingVacationDays = 20;
+    }
+  // get 
+  get name() {
+    return this._name;
+  }
+  get department() {
+    return this._department;
+  }
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  // Method 
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays = this._remainingVacationDays - daysOff;
+  } 
+}
+
+const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
+const surgeonDurant = new Surgeon('Durant', 'Orthopedics');
+
+
+console.log(surgeonCurry.name);
+surgeonCurry.takeVacationDays(3);
+console.log(surgeonCurry.remainingVacationDays);
+```
+
+##### Inheritance
+Create a parent class or super class and child classes that inherites the properties of the parent
+
+- The **extends** keyword makes the **methods** of the animal class available inside the cat class.
+- the **super** keyword calls the construtor of parent and inherties and passes the ** name arguments** to the child class
+- '_' identifies a method as private not public 
+ 
+```javascript
+class HospitalEmployee {
+  constructor(name) {
+    this._name = name;
+    this._remainingVacationDays = 20;
+  }
+  
+  get name() {
+    return this._name;
+  }
+  
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+}
+
+class Nurse extends HospitalEmployee {
+  constructor(name, certifications) {
+    super(name);
+    this._certifications = certifications;
+    }  
+}
+
+const nurseOlynyk = new Nurse('Olynyk', ['Trauma', 'Pediatrics']);
+```
+
+##### Another Example
+
+```javascript
+class HospitalEmployee {
+  constructor(name) {
+    this._name = name;
+    this._remainingVacationDays = 20;
+  }
+  
+  get name() {
+    return this._name;
+  }
+  
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+}
+
+class Nurse extends HospitalEmployee {
+  constructor(name, certifications) {
+    super(name);
+    this._certifications = certifications;
+  } 
+  get certifications() {
+    return this._certifications;
+  }
+  addCertification(newCertification) {
+    this._certifications.push(newCertification);
+  }
+}
+```
+
+##### Static
+Static calls methods directly from within a class 
+
+```javascript
+class HospitalEmployee {
+  constructor(name) {
+    this._name = name;
+    this._remainingVacationDays = 20;
+  }
+  static generatePassword() {
+    return Math.floor(Math.random() * 10000);
+  } 
+```
+
+##### Putting it all together
+
+```javascript
+class HospitalEmployee {
+  constructor(name) {
+    this._name = name;
+    this._remainingVacationDays = 20;
+  }
+  static generatePassword() {
+    return Math.floor(Math.random() * 10000);
+  } 
+  
+  get name() {
+    return this._name;
+  }
+  
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+}
+
+class Nurse extends HospitalEmployee {
+  constructor(name, certifications) {
+    super(name);
+    this._certifications = certifications;
+  } 
+  
+  get certifications() {
+    return this._certifications;
+  }
+  
+  addCertification(newCertification) {
+    this.certifications.push(newCertification);
+  }
+}
+
+const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
+nurseOlynyk.takeVacationDays(5);
+console.log(nurseOlynyk.remainingVacationDays);
+nurseOlynyk.addCertification('Genetics');
+console.log(nurseOlynyk.certifications);
+```
+
+### Browser Compatibility
+- Badel translates from new JS to older JS. In order to work on all browsers
+- caniuse.com is used to check if a function is available in certain browsers 
+
+<br>
+### Module
+Modules are reusable pieces of code that can be exported from one program and imported for use in another program
+> - module.exports
+> - require()
+> - export default
+
+##### module.exports
+
+```javascript
+let Airplane = {};
+// Add property
+Airplane.myAirplane = 'StarJet';
+// Export to module
+module.exports = Airplane;
+```
+
+##### require()
+this is like import in python 
+
+```javascript
+const Airplane = require('./1-airplane.js');
+
+function displayAirplane() {
+  console.log(Airplane.myAirplane);
+}
+
+displayAirplane();
+```
+
+##### export default
+This is similar to module.exports
+
+```javascript
+let Airplane = {};
+
+Airplane.availableAirplanes = [
+{
+  name: 'AeroJet',
+  fuelCapacity: 800
+ }, 
+ {name: 'SkyJet',
+  fuelCapacity: 500
+ }
+];
+
+export default Airplane;
+```
+
