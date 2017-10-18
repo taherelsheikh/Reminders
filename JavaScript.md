@@ -43,7 +43,8 @@ console.log('Codecademy'.length);
 console.log('Codecademy'.toUpperCase()); 
 // Remove whitespace
 console.log('    Remove whitespace   '.trim()); 
-
+// Similar to raw_input() in Python
+prompt('Whats up?');
 ```
 <br>
 
