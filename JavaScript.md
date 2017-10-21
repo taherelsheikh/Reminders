@@ -289,6 +289,12 @@ console.log('The volume of a sphere is ' + volumeOfSphere(10) + ' cubic centimet
 ```
 <br>
 
+##### Concise Functions
+```javascript
+const areaOfCircle = radius => Math.PI * radius * radius;
+areaOfCircle(4);
+```
+
 ### Scope 
 > - Global Scope 
 > - Block Scope 
