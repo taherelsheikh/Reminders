@@ -420,8 +420,9 @@ fruits.forEach(function(fruitItem) {
   console.log(`I want to eat a ${fruitItem}`)
                });
 // Method 2
-fruits.forEach(fruitItem => console.log(
-`- ${fruitItem}`));
+fruits.forEach(fruitItem => {
+  console.log('I want to eat ' + fruitItem);
+});
 ```
 
 ##### .map()
