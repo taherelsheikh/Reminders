@@ -457,6 +457,12 @@ word => word.length > 7);
 let longFavoriteWords = favoriteWords.filter(function(word) {
   return word.length > 7;
 });
+
+// Other Examples
+let interestingWords = words.filter(word => word.length > 5);
+
+// Or
+let interestingWords = words.filter(word => {return word.length > 5;})
 ```
 
 ##### Other Examples
