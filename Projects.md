@@ -1,7 +1,7 @@
 # Projects 
 
 - JavaScript Projects
- - [Rock, Paper, Scissors](#Rock,-Paper,-Scissors) 
+ - [Rock, Paper, Scissors](#rock-paper-scissors) 
  - [Sleep Debt Calculator](#sleep-debt-calculator)
 
 
@@ -9,7 +9,7 @@
 
 
 
-### Rock, Paper, Scissors
+### Rock Paper Scissors
 
 ```javascript 
 const getUserChoice = (userInput) => {
