@@ -1,11 +1,11 @@
 # Projects 
 
 ## JavaScript Projects
- > - [Rock, Paper, Scissors](#rock-paper-scissors) 
- > - [Sleep Debt Calculator](#sleep-debt-calculator)
+ > * [Rock, Paper, Scissors](#rock-paper-scissors) 
+ > * [Sleep Debt Calculator](#sleep-debt-calculator)
 
 
-
+<br>
 
 
 
