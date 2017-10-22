@@ -432,8 +432,20 @@ fruits.forEach(fruitItem => {
 
 ```javascript 
 let bigNumbers = [100, 200, 300, 400, 500];
-let smallNumbers = bigNumbers.map(num => num/100);
+// Method 1 
+let secretMessage = animals.map(function(animalItem) {
+  return animalItem[0];
+ })
+ 
+// Method 2
+let secretMessage = animals.map(animalItem => {
+  return animalItem[0];
+}) 
 
+// Method 2 on a different problem 
+let smallNumbers = bigNumbers.map(number => {
+  return number/100;
+})
 ```
 
 ##### .filter()
