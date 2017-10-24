@@ -1,10 +1,11 @@
 # Projects 
 
 ## JavaScript Projects
-- Functions
+- ### Functions
  > * [Rock, Paper, Scissors](#rock-paper-scissors) 
  > * [Sleep Debt Calculator](#sleep-debt-calculator)
-
+- ### Loops
+ > * [Whale Talk](#whale-talk)
 
 <br>
 
@@ -136,3 +137,33 @@ const calculateSleepDebt = () => {
 calculateSleepDebt();
 
 ```
+
+### Whale Talk
+
+```javascript
+let input = 'Turpentine and turtles';
+
+let vowels = ['a', 'u', 'o', 'i', 'e'];
+
+let resultArray = [];
+
+for (let inputIndex = 0;
+    inputIndex < input.length;
+    inputIndex++) {
+  for (let vowelsIndex = 0;
+      vowelsIndex < vowels.length;
+      vowelsIndex++) {
+    if (input[inputIndex] === vowels[vowelsIndex]) {
+      resultArray.push(input[inputIndex]);
+    }
+    
+  }
+  
+  if (input[inputIndex] === 'e' || input[inputIndex] === 'u') {
+    resultArray.push(input[inputIndex]);
+  }
+};
+
+console.log(resultArray.join('').toUpperCase());
+```
+
