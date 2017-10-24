@@ -1,12 +1,12 @@
 # Projects 
 
 ## JavaScript Projects
- ### Functions
+### Functions
  > * [Rock, Paper, Scissors](#rock-paper-scissors) 
  > * [Sleep Debt Calculator](#sleep-debt-calculator)
-- ### Loops
+### Loops
  > * [Whale Talk](#whale-talk)
-- ### Iterations
+### Iterations
  > * [Secret Message](#secret-message)
 
 <br>
