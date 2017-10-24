@@ -7,7 +7,7 @@
 - ### Loops
  > * [Whale Talk](#whale-talk)
 - ### Iterations
- > * (Secret Message)(#secret-message)
+ > * [Secret Message](#secret-message)
 
 <br>
 
