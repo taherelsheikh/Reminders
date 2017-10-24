@@ -1,6 +1,7 @@
 # Projects 
 
 ## JavaScript Projects
+- Functions
  > * [Rock, Paper, Scissors](#rock-paper-scissors) 
  > * [Sleep Debt Calculator](#sleep-debt-calculator)
 
