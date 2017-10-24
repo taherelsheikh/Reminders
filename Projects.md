@@ -8,7 +8,7 @@
  > * [Whale Talk](#whale-talk)
 ### Iterations
  > * [Secret Message](#secret-message)
-### Scopes
+### Scope
  > * [Training Days](#training-days)
 
 
