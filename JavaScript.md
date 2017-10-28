@@ -706,8 +706,20 @@ class Surgeon {
 Creating an instance is done by using the 'new' function
 
 ```javascript
+// Example 1 
 const surgeonCurry = new Surgeon('Curry', 
 'Cardiovascular');
+
+// Example 2
+class Surgeon {
+  constructor(name, department) {
+    this.name = name;
+    this.department = department;
+  }
+}
+
+const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
+const surgeonDurant = new Surgeon('Durant', 'Orthopedics');
 ```
 
 ##### Methods
@@ -719,25 +731,31 @@ class Surgeon {
     this._name = name;
     this._department = department;
     this._remainingVacationDays = 20;
-    }
-  // get statment
+  }
+  
   get name() {
     return this._name;
   }
+  
   get department() {
     return this._department;
   }
+  
   get remainingVacationDays() {
     return this._remainingVacationDays;
   }
-  // Method statment
+  
   takeVacationDays(daysOff) {
-    this._remainingVacationDays = this._remainingVacationDays - daysOff;
-  } 
+    this._remainingVacationDays -= daysOff;
+  }
 }
 
 const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
 const surgeonDurant = new Surgeon('Durant', 'Orthopedics');
+
+console.log(surgeonCurry.name);
+surgeonCurry.takeVacationDays(3);
+console.log(surgeonCurry.remainingVacationDays);
 ```
 ##### Method Calls
  
@@ -775,9 +793,8 @@ console.log(surgeonCurry.remainingVacationDays);
 
 ##### Inheritance
 Create a parent class or super class and child classes that inherites the properties of the parent
-
-- The **extends** keyword makes the **methods** of the animal class available inside the cat class.
-- the **super** keyword calls the construtor of parent and inherties and passes the ** name arguments** to the child class
+- **extends** makes the subcalss inheite all methods, getters, and setters from the parent
+- **super** sets the propetries from the parent class into the subclass
 - '_' identifies a method as private not public 
  
 ```javascript
@@ -844,10 +861,16 @@ class Nurse extends HospitalEmployee {
     this._certifications.push(newCertification);
   }
 }
+
+const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
+nurseOlynyk.takeVacationDays(5);
+console.log(nurseOlynyk.remainingVacationDays);
+nurseOlynyk.addCertification('Genetics');
+console.log(nurseOlynyk.certifications);
 ```
 
 ##### Static
-Static calls methods directly from within a class 
+Static like .now() are only called from the class not the intance. This wont work for example tyson.generateName(); bu this will Animal.generateName();
 
 ```javascript
 class HospitalEmployee {
@@ -857,7 +880,9 @@ class HospitalEmployee {
   }
   static generatePassword() {
     return Math.floor(Math.random() * 10000);
-  } 
+  }
+
+console.log(HospitalEmployee.generatePassword());
 ```
 
 ##### Putting it all together
