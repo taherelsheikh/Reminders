@@ -10,7 +10,11 @@
  > * [Secret Message](#secret-message)
 ### Scope
  > * [Training Days](#training-days)
-
+### Objects
+ > * [Team Stats](#team-stats)
+### Classes
+ > * [Build a Library](#build-a-library]
+ > * [School Catalogue](#school-catalogue)
 
 <br>
 
@@ -249,11 +253,215 @@ const getEventMessage = () => {
 getEventMessage();
 ```
 
-                      
+### Team Stats                     
                   
-                         
-                         
-                         
-                         
-              
+```javascript
+const team = {
+  _players: [
+    {firstname: 'Serena',
+     lastname: 'Williams',
+     age: 36},
+    {firstname: 'Roger',
+     lastname: 'Federer',
+     age: 36},
+     {firstname: 'Rafeal',
+     lastname: 'Nadal',
+     age: 35}, 
+            ],
+  _games: [
+      {opponent: "Ahly", 
+         teamPoints: 44, 
+         opponentPoints:27},
+      {opponent: "Zamalik", 
+         teamPoints: 20, 
+         opponentPoints:27},
+      {opponent: "Real", 
+         teamPoints: 30, 
+         opponentPoints:27}    
+  ],
+  get players() {
+    return this._players
+  },
+  get games() {
+    return this._games
+  },
+  addPlayer(firstName, lastName, age) {
+    let player = {
+      firstname: firstName,
+      lastName: lastName, 
+      age: age
+    }
+    this.players.push(player); 
+  },
+  addGame (opponent, teamPoints, opponentPoints) {
+     let game = {
+           opponent: opponent,
+           teamPoints: teamPoints, 
+            opponentPoints: opponentPoints  
+          }
+     this.games.push(game);
+    }
+};
 
+
+team.addPlayer("Steph", "Curry", 30);
+team.addGame("Steph",40, 30);
+console.log(team._games);
+console.log(team._players);
+```                    
+### Build A Library                         
+                         
+```javascript
+class Media {
+  constructor(title) {
+    this._title = title;
+    this._ratings = [];
+    this._isCheckedOut = false;
+  } 
+  get title() {
+    return this._title;
+  }
+  get isCheckedOut() {
+    return this._isCheckedOut;
+  }
+  get ratings() {
+    return this._ratings;
+  }
+  toggleCheckOutStatus() {
+    if (this._isCheckedOut) {
+      this._isCheckedOut = false;
+    } else {
+      this._isCheckedOut = true
+    }
+  }
+  getAverageRating() {
+    let ratingsSum = this.ratings.reduce((currentSum, rating) => currentSum + rating, 0);  
+    let lengthOfArray = this.ratings.length;
+    return Math.floor(ratingsSum / lengthOfArray);
+  }
+  addRating(name) {
+    this.ratings.push(name);
+  } 
+}
+
+class Book extends Media {
+   constructor(title, author, pages) {
+     super(title);
+     this._author = author;
+     this._pages = pages;
+ } 
+  get author() { return this._author;}
+  get pages() {return this._pages;}
+}
+
+class Movie extends Media {
+  constructor(title, director, runTime) {
+    super(title);
+    this._director = director;
+    this._runTime = runTime;
+  }
+  get director() {return this._director}
+  get runTime() {return this._runTime}
+}
+
+
+const historyOfEverything = new Book( "A Short History of Nearly Everything","Bill Bryson",  544);
+
+historyOfEverything.toggleCheckOutStatus();
+console.log(historyOfEverything.isCheckedOut);
+
+historyOfEverything.addRating(4)
+historyOfEverything.addRating(5)
+historyOfEverything.addRating(5)
+
+console.log(historyOfEverything.getAverageRating());
+
+const speed = new Movie("Speed","Jan de Bont", 116);
+speed.toggleCheckOutStatus();
+console.log(speed.isCheckedOut);
+
+
+speed.addRating(1);
+speed.addRating(1);
+speed.addRating(5);
+
+console.log(speed.getAverageRating());
+```              
+### School Catalogue
+
+```javascript
+class Media {
+  constructor(title) {
+    this._title = title;
+    this._ratings = [];
+    this._isCheckedOut = false;
+  } 
+  get title() {
+    return this._title;
+  }
+  get isCheckedOut() {
+    return this._isCheckedOut;
+  }
+  get ratings() {
+    return this._ratings;
+  }
+  toggleCheckOutStatus() {
+    if (this._isCheckedOut) {
+      this._isCheckedOut = false;
+    } else {
+      this._isCheckedOut = true
+    }
+  }
+  getAverageRating() {
+    let ratingsSum = this.ratings.reduce((currentSum, rating) => currentSum + rating, 0);  
+    let lengthOfArray = this.ratings.length;
+    return Math.floor(ratingsSum / lengthOfArray);
+  }
+  addRating(name) {
+    this.ratings.push(name);
+  } 
+}
+
+class Book extends Media {
+   constructor(title, author, pages) {
+     super(title);
+     this._author = author;
+     this._pages = pages;
+ } 
+  get author() { return this._author;}
+  get pages() {return this._pages;}
+}
+
+class Movie extends Media {
+  constructor(title, director, runTime) {
+    super(title);
+    this._director = director;
+    this._runTime = runTime;
+  }
+  get director() {return this._director}
+  get runTime() {return this._runTime}
+}
+
+
+const historyOfEverything = new Book( "A Short History of Nearly Everything","Bill Bryson",  544);
+
+historyOfEverything.toggleCheckOutStatus();
+console.log(historyOfEverything.isCheckedOut);
+
+historyOfEverything.addRating(4)
+historyOfEverything.addRating(5)
+historyOfEverything.addRating(5)
+
+console.log(historyOfEverything.getAverageRating());
+
+const speed = new Movie("Speed","Jan de Bont", 116);
+speed.toggleCheckOutStatus();
+console.log(speed.isCheckedOut);
+
+
+speed.addRating(1);
+speed.addRating(1);
+speed.addRating(5);
+
+console.log(speed.getAverageRating());
+```
