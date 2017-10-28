@@ -13,7 +13,7 @@
 ### Objects
  > * [Team Stats](#team-stats)
 ### Classes
- > * [Build a Library](#build-a-library]
+ > * [Build a Library](#build-library]
  > * [School Catalogue](#school-catalogue)
 
 <br>
