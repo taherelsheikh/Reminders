@@ -309,7 +309,7 @@ team.addGame("Steph",40, 30);
 console.log(team._games);
 console.log(team._players);
 ```                    
-### Build A Library                         
+### Build Library                         
                          
 ```javascript
 class Media {
