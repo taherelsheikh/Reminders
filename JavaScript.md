@@ -535,7 +535,7 @@ console.log(object.sayHello);
 ```
 
 ##### this
-'this' solves scope issues when dealining with values inside of an object <br>
+this helps us with scope inside of object methods. <br>
 example 1
 
 ```javascript
@@ -551,7 +551,7 @@ let object = {
     sayHello() {return `Hello, my name is ${name}`}
 };
 ```
-example 2
+example 2 
 
 ```javascript
 let person = {
@@ -568,10 +568,49 @@ friend.sayHello = person.sayHello;
 console.log(friend.sayHello());
 ```
 
-##### set
-Getter and setter methods allow you to process data before accessing or setting property values
+##### this - advanced feature
+this is a dynamic variable that can change depending on the object that is calling the method
 
 ```javascript
+// Object One
+let person = {
+  name: 'Tyron',
+sayHello: function() {
+    return `Hello, my name is ${this.name}`;
+  }
+// Object Two
+let friend = {
+  name: 'taher'
+}
+
+// Advanced this
+friend.sayHello = person.sayHello;
+// prints 'Hello my name is taher'
+console.log(friend.sayHello());
+```
+
+##### set
+Getter and setter methods allow you to process data before accessing or setting property values.
+Developers use _ when setting property name to indicate a property or value should not be modified directly by other code.
+
+
+```javascript
+// Example 1 
+let person = {
+  _name: 'Lu Xun',
+  _age: 137,
+  
+  set age(ageIn) {
+    if (typeof ageIn === 'number') {
+      this._age = ageIn;
+    }
+    else {
+      return 'Invalid input';
+    }
+  }
+};
+
+// Example 2 
 let person = {
   _name: 'Lu Xun',
   _age: 137,
@@ -587,7 +626,11 @@ let person = {
   }
 
 };
-person.age = 10;
+
+// not going to work 
+person.age = 'Thirty-nine';
+// this would work 
+person.age = 39;
 ```
 
 ##### get
