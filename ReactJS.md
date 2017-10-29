@@ -1,7 +1,8 @@
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png" width="200">
+
 # React
-- [JSX](#jsx) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png =250x)
-- 
+- [JSX](#jsx) 
 
 
 ## JSX
