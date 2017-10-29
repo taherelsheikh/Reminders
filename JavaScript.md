@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://www.pinterest.com/pin/515099276106826090/" width="350">
+<img src="http://www.userlogos.org/files/javascript-logo.png" width="350">
 </p>
 
 
