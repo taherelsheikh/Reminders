@@ -11,7 +11,7 @@
 
 
 
-# React Outline 
+## React Outline  
 
 - [JSX](#jsx) 
 
