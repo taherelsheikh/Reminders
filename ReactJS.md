@@ -93,6 +93,65 @@ ReactDOM.render(kitty,
 document.getElementById('app'));
 ```
 
+#### Conditionals JSX
+
+```javascript 
+// Example 1
+
+const headline = (
+  <h1>
+    { age >= drinkingAge ? 'Buy Drink' : 'Do Teen Stuff' }
+  </h1>
+);
+
+// Example 2
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+let message;
+
+if (user.age >= drinkingAge) {
+  message = (
+    <h1>
+      Hey, check out this alcoholic beverage!
+    </h1>
+  );
+} else {
+  message = (
+    <h1>
+      Hey, check out these earrings I got at Claire's!
+    </h1>
+  );
+}
+
+ReactDOM.render(
+  message, 
+  document.getElementById('app')
+);
+
+// Example 3
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+function coinToss () {
+  // Randomly return either 'heads' or 'tails'.
+  return Math.random() < 0.5 ? 'heads' : 'tails';
+}
+
+const pics = {
+  kitty: 'https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-kitty.jpg',
+  doggy: 'https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-puppy.jpeg'
+};
+
+const img = <img src={pics[coinToss() === 'heads' ? 'kitty' : 'doggy']} />;
+
+ReactDOM.render(
+	img, 
+	document.getElementById('app')
+);
+```
+
+
 
 
 
