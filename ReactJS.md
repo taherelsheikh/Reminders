@@ -7,7 +7,7 @@
 
 ## JSX
 > - [JSX Elements](#jsx-elements)
-> - [Render an element](#render-an-elment)
+> - [Render an element](#render-an-element)
 
 
 #### JSX Elements
