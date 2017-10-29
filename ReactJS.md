@@ -1,7 +1,6 @@
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png)
 
 # React
-- [JSX](#jsx)
+- [JSX](#jsx) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png)
 - 
 
 
