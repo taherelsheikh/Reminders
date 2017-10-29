@@ -1,8 +1,8 @@
-# Projects 
+# Projects
 
 ## JavaScript Projects
 ### Functions
- > * [Rock, Paper, Scissors](#rock-paper-scissors) 
+ > * [Rock, Paper, Scissors](#rock-paper-scissors)
  > * [Sleep Debt Calculator](#sleep-debt-calculator)
 ### Loops
  > * [Whale Talk](#whale-talk)
@@ -15,14 +15,15 @@
 ### Classes
  > * [Build Library](#build-library)
  > * [School Catalogue](#school-catalogue)
-
+### Modules
+> * [Work Around](#work-around)
 <br>
 
 
 
 ### Rock Paper Scissors
 
-```javascript 
+```javascript
 const getUserChoice = (userInput) => {
   userInput = userInput.toLowerCase();
   if (userInput === 'rock' || userInput === 'paper'
@@ -42,14 +43,14 @@ const getComputerChoice = () => {
       return 'paper';
     case 0:
       return 'scissors';
-                } 
+                }
 };
 
 const determineWinner = (userChoice, computerChoice) => {
   if (userChoice === computerChoice) {
     return 'Both Winners!'
-  } 
-  else { 
+  }
+  else {
     if (userChoice === 'rock') {
       if (computerChoice == 'scissors') {
         return 'You Won!';
@@ -74,9 +75,9 @@ const determineWinner = (userChoice, computerChoice) => {
   if (userChoice === 'bomb') {
     return "You Won! ;)";
   }
-    
+
   }
-  
+
 };
 
 const playGame = () => {
@@ -111,25 +112,25 @@ const getSleepHours = (day) => {
       return 7;
   case 'Sunday':
       return 8;    
-         } 
+         }
 };
 
 const getActualSleepHours = () => {
    return getSleepHours('Monday') + getSleepHours('Tuesday')
    + getSleepHours('Wednesday') + getSleepHours('Thursday') +
-   +  getSleepHours('Friday') + getSleepHours('Saturday') + 
-   +  getSleepHours('Sunday'); 
+   +  getSleepHours('Friday') + getSleepHours('Saturday') +
+   +  getSleepHours('Sunday');
 };
 
 const getIdealSleepHours = () => {
   const idealHours = 8;
-  return idealHours * 7; 
+  return idealHours * 7;
 };
 
 const calculateSleepDebt = () => {
   const actualSleepHours = getActualSleepHours();
   const idealSleepHours = getIdealSleepHours();
-  const amountNeeded = idealSleepHours - actualSleepHours; 
+  const amountNeeded = idealSleepHours - actualSleepHours;
   if (actualSleepHours === idealSleepHours) {
     console.log('Perfect amount of sleep!');
   }
@@ -165,9 +166,9 @@ for (let inputIndex = 0;
     if (input[inputIndex] === vowels[vowelsIndex]) {
       resultArray.push(input[inputIndex]);
     }
-    
+
   }
-  
+
   if (input[inputIndex] === 'e' || input[inputIndex] === 'u') {
     resultArray.push(input[inputIndex]);
   }
@@ -197,7 +198,7 @@ let betterWords = storyWords.filter(word => {
 unnecessaryWords.forEach(
   word => console.log(word));
 ```
-  
+
 ### Training Days
 
 ```javascript
@@ -217,28 +218,28 @@ const getEventActivities = (event) => {
   const allEvents =  getAllEvents();
 
   if (!allEvents.includes(event)) {
-    return null; 
+    return null;
   }
   let activities;
   if (event === 'Marathon') {
     activities = ['Running'];
-    return activities.join(', '); 
-  } 
+    return activities.join(', ');
+  }
   if (event === 'Triathlon') {
     activities = ['Running', 'Cycling', 'Swimming'];
-    return activities.join(', '); 
-  } 
+    return activities.join(', ');
+  }
   if (event === 'Decathlon') {
     activities = ['Running', 'Hurdles', 'Javelin throw', 'Discus Throw', 'Shot put', 'High Jump'];
-    return activities.join(', '); 
+    return activities.join(', ');
   }
-  
+
 };
 
 const getDaysToTrain = (event) => {
   const allEvents =  getAllEvents();
   if (!allEvents.includes(event)) {
-    return null; 
+    return null;
   }
   const eventTrainingTimes = {'Marathon': 50, 'Triathlon': 100, 'Decathlon': 200 };
 
@@ -247,14 +248,14 @@ const getDaysToTrain = (event) => {
 
 const getEventMessage = () => {
   const myEvent = getRandomEvent();
-  console.log('Your event is a ' + myEvent + '. Your event activities consist of ' + getEventActivities(myEvent) + '. You have ' + getDaysToTrain(myEvent) +  ' days to train.'); 
+  console.log('Your event is a ' + myEvent + '. Your event activities consist of ' + getEventActivities(myEvent) + '. You have ' + getDaysToTrain(myEvent) +  ' days to train.');
 };
 
 getEventMessage();
 ```
 
 ### Team Stats                     
-                  
+
 ```javascript
 const team = {
   _players: [
@@ -266,17 +267,17 @@ const team = {
      age: 36},
      {firstname: 'Rafeal',
      lastname: 'Nadal',
-     age: 35}, 
+     age: 35},
             ],
   _games: [
-      {opponent: "Ahly", 
-         teamPoints: 44, 
+      {opponent: "Ahly",
+         teamPoints: 44,
          opponentPoints:27},
-      {opponent: "Zamalik", 
-         teamPoints: 20, 
+      {opponent: "Zamalik",
+         teamPoints: 20,
          opponentPoints:27},
-      {opponent: "Real", 
-         teamPoints: 30, 
+      {opponent: "Real",
+         teamPoints: 30,
          opponentPoints:27}    
   ],
   get players() {
@@ -288,15 +289,15 @@ const team = {
   addPlayer(firstName, lastName, age) {
     let player = {
       firstname: firstName,
-      lastName: lastName, 
+      lastName: lastName,
       age: age
     }
-    this.players.push(player); 
+    this.players.push(player);
   },
   addGame (opponent, teamPoints, opponentPoints) {
      let game = {
            opponent: opponent,
-           teamPoints: teamPoints, 
+           teamPoints: teamPoints,
             opponentPoints: opponentPoints  
           }
      this.games.push(game);
@@ -310,14 +311,14 @@ console.log(team._games);
 console.log(team._players);
 ```                    
 ### Build Library                         
-                         
+
 ```javascript
 class Media {
   constructor(title) {
     this._title = title;
     this._ratings = [];
     this._isCheckedOut = false;
-  } 
+  }
   get title() {
     return this._title;
   }
@@ -341,7 +342,7 @@ class Media {
   }
   addRating(name) {
     this.ratings.push(name);
-  } 
+  }
 }
 
 class Book extends Media {
@@ -349,7 +350,7 @@ class Book extends Media {
      super(title);
      this._author = author;
      this._pages = pages;
- } 
+ }
   get author() { return this._author;}
   get pages() {return this._pages;}
 }
@@ -395,7 +396,7 @@ class Media {
     this._title = title;
     this._ratings = [];
     this._isCheckedOut = false;
-  } 
+  }
   get title() {
     return this._title;
   }
@@ -419,7 +420,7 @@ class Media {
   }
   addRating(name) {
     this.ratings.push(name);
-  } 
+  }
 }
 
 class Book extends Media {
@@ -427,7 +428,7 @@ class Book extends Media {
      super(title);
      this._author = author;
      this._pages = pages;
- } 
+ }
   get author() { return this._author;}
   get pages() {return this._pages;}
 }
@@ -464,4 +465,76 @@ speed.addRating(1);
 speed.addRating(5);
 
 console.log(speed.getAverageRating());
+```
+
+### Work Around
+
+employee.js
+
+```javascript
+let Employee = {
+  salary: 100000
+};
+
+
+let payGrades = {
+  entryLevel: { taxMultiplier: .05, benefits: ['health'], minSalary: 10000, maxSalary: 49999 },
+  midLevel: { taxMultiplier: .1, benefits: ['health', 'housing'], minSalary: 50000, maxSalary: 99999 },
+  seniorLevel: { taxMultiplier: .2, benefits: ['health', 'housing', 'wellness', 'gym'], minSalary: 100000, maxSalary: 200000 }
+};
+
+Employee.getCadre =
+function() {
+  if (Employee.salary >= payGrades.entryLevel.minSalary && Employee.salary <= payGrades.entryLevel.maxSalary) {
+    return 'entryLevel';
+  } else if (Employee.salary >= payGrades.midLevel.minSalary && Employee.salary <= payGrades.midLevel.maxSalary) {
+    return 'midLevel';
+  } else return 'seniorLevel';
+}
+
+Employee.calculateTax =
+function() {
+  return payGrades[Employee.getCadre()].taxMultiplier * Employee.salary;
+}
+
+Employee.getBenefits =
+function() {
+  return payGrades[Employee.getCadre()].benefits.join(', ');
+}
+
+Employee.calculateBonus =
+function() {
+  return .02 * Employee.salary;
+}
+
+Employee.reimbursementEligibility =
+function() {
+  let reimbursementCosts = { health: 5000, housing: 8000, wellness: 6000, gym: 12000 };
+  let totalBenefitsValue = 0;
+  let employeeBenefits = payGrades[Employee.getCadre()].benefits;
+  for (let i = 0; i < employeeBenefits.length; i++) {
+    totalBenefitsValue += reimbursementCosts[employeeBenefits[i]];
+  }
+  return totalBenefitsValue;
+}
+
+export default Employee;
+```
+workAround.js
+```JavaScript
+import Employee from './employee.js'
+
+
+function getEmployeeInformation(inputSalary) {
+  Employee.salary = inputSalary;
+  console.log('Cadre: ' + Employee.getCadre());
+  console.log('Tax: ' + Employee.calculateTax());
+  console.log('Benefits: ' + Employee.getBenefits());
+  console.log('Bonus: ' + Employee.calculateBonus());
+  console.log('Reimbursement Eligibility: ' + Employee.reimbursementEligibility() + '\n');
+}
+
+getEmployeeInformation(10000);
+getEmployeeInformation(50000);
+getEmployeeInformation(100000);
 ```
