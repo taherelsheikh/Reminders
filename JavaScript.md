@@ -1,5 +1,5 @@
 <p align="center">
-<img src="http://www.userlogos.org/files/javascript-logo.png" width="350">
+<img src="http://www.userlogos.org/files/javascript-logo.png" width="200">
 </p>
 
 
