@@ -130,7 +130,7 @@ if (user.age >= drinkingAge) {
 } else {
   message = (
     <h1>
-      Hey, check out these earrings I got at Claire's!
+      Hey check out these earrings I got at Claires!
     </h1>
   );
 }
