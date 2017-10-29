@@ -1,3 +1,7 @@
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png" width="200" align="middle">
+
+# React 
+
 #### This is how React works
 - A JSX element renders.
 - The entire virtual DOM updates.
@@ -5,10 +9,9 @@
 - Part of the real DOM updates.
 - The screen looks different than it used to.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png" width="200" align="middle">
 
 
-# React 
+# Outline 
 
 - [JSX](#jsx) 
 
