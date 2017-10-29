@@ -950,6 +950,7 @@ Modules are reusable pieces of code that can be exported from one program and im
 > - named exports
 > - named import
 > - export as 
+> - import as
 
 ##### module.exports
 
@@ -1094,7 +1095,35 @@ function meetsSpeedRangeRequirements(maxSpeed, minSpeed, requiredSpeedRange) {
 export { availableAirplanes as aircrafts, flightRequirements as flightReqs, meetsStaffRequirements as meetsStaffReqs, meetsSpeedRangeRequirements as meetsSpeedRangeReqs };
 ```
 
+#### import as
+based on the above example 
 
+```javascript 
+import {aircrafts, flightReqs, meetsStaffReqs} from './airplanes'
+```
+
+### Export as soon as they are decalred
+```javascript 
+export let flightRequirements = {
+  requiredStaff: 4,
+  requiredSpeedRange: 700
+};
+
+export function meetsStaffRequirements(availableStaff, requiredStaff) {
+  if (availableStaff.length >= requiredStaff) {
+    return true;
+  } else {
+    return false;
+  }
+};
+```
+
+#### Combining import statments
+```javascript 
+import { specialty, isVegetarian, isLowSodium } from './menu';
+
+import GlutenFree from './menu';
+```
 
 
 
