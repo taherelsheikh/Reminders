@@ -1,3 +1,9 @@
+<p align="center">
+<img src="https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.dreamlogic.io%2Fimg%2Fbrands%2Flogos%2Fjs.png&imgrefurl=http%3A%2F%2Fwww.dreamlogic.io%2Fexpertise-js.html&docid=lEUBYDbU2U57vM&tbnid=Y9tFz4WdINSCXM%3A&vet=10ahUKEwiIk4nB75bXAhWHxIMKHUSvAfQQMwjXAiggMCA..i&w=480&h=480&bih=726&biw=1440&q=javascript&ved=0ahUKEwiIk4nB75bXAhWHxIMKHUSvAfQQMwjXAiggMCA&iact=mrc&uact=8" width="350">
+</p>
+
+
+
 # JavaScript
 - [Data types](#data-types)
 - [Methods](#methods)
