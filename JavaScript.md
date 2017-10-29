@@ -946,6 +946,9 @@ Modules are reusable pieces of code that can be exported from one program and im
 > - module.exports
 > - require()
 > - export default
+> - import
+> - named exports
+> - named import
 
 ##### module.exports
 
@@ -989,7 +992,7 @@ Airplane.availableAirplanes = [
 export default Airplane;
 ```
 
-#### import 
+##### import 
 This is similar to require but with the new JS syntax
 
 ```javascript
@@ -1006,6 +1009,45 @@ Airplane.availableAirplanes.forEach(function(element){
 displayFuelCapacity();
 ```
 
+##### Named Exports 
+This is used to name a export spicific functions, variables, objects etc
+
+```javascript
+let specialty = '';
+function isVegetarian() {
+}; 
+function isLowSodium() {
+}; 
+
+export { specialty, isVegetarian };
+```
+##### Named imports
+
+```javascript
+// Simple Example
+import { specialty, isVegetarian } from './menu';
+
+console.log(specialty);
+
+// Advanced Example
+import {availableAirplanes, flightRequirements, meetsStaffRequirements} from './airplane';
+
+function displayFuelCapacity() {
+  availableAirplanes.forEach(function(element) {
+    console.log('Fuel Capacity of ' + element.name + ': ' + element.fuelCapacity);
+  });
+}
+
+displayFuelCapacity();
+
+function displayStaffStatus() {
+  availableAirplanes.forEach(function(element) {
+   console.log(element.name + ' meets staff requirements: ' + meetsStaffRequirements(element.availableStaff, flightRequirements.requiredStaff) );
+  });
+}
+
+displayStaffStatus();
+```
 
 
 
