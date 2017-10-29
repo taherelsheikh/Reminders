@@ -1,4 +1,4 @@
-# JavaScript - 
+# JavaScript
 - [Data types](#data-types)
 - [Methods](#methods)
 - [Libraries](#libraries)
@@ -19,8 +19,13 @@
 - [Objects](#objects)
 - [Classes](#classes)
 - [Browser Compatiblity](#browser-compatiblity)
-- [Module](#module)
 - [JS Cheat Sheet](https://www.codecademy.com/articles/bwa-javascript-reference)
+
+# JavaScript Tools
+- [Jupyter NoteBooks for JS](#https://repl.it/languages/javascript)
+- [Auto Organize JS, HTML, CSS code ](#Dirtymarkup.com)
+- [Render JS with HTML with CSS](# Codepen.io)
+
 
   
 <br>
