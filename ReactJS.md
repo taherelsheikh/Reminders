@@ -1,6 +1,6 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png" width="200" align="middle">
 This is how React works
-- A JSX element renders.
+> - A JSX element renders.
 - The entire virtual DOM updates.
 - The virtual DOM "diffs," comparing its current self with its previous self.
 - Part of the real DOM updates.
