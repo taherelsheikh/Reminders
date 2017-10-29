@@ -1,4 +1,4 @@
-# JavaScript 
+# JavaScript - 
 - [Data types](#data-types)
 - [Methods](#methods)
 - [Libraries](#libraries)
@@ -20,7 +20,7 @@
 - [Classes](#classes)
 - [Browser Compatiblity](#browser-compatiblity)
 - [Module](#module)
-
+- [JS Cheat Sheet](https://www.codecademy.com/articles/bwa-javascript-reference)
 
   
 <br>
