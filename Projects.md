@@ -16,7 +16,10 @@
  > * [Build Library](#build-library)
  > * [School Catalogue](#school-catalogue)
 ### Modules
-> * [Work Around](#work-around)
+> * [Work Around One](#work-around-one)
+> * [Work Around Two](#work-around-two)
+> * [Work Around Three](#work-around-three)
+
 <br>
 
 
@@ -467,9 +470,11 @@ speed.addRating(5);
 console.log(speed.getAverageRating());
 ```
 
-### Work Around
+### Work Around One
 
 employee.js
+- payGrades wasn't exported or imported since its already in the same file, all the code has access to it
+- Usually we import and export only the variables used in the workAround.js file
 
 ```javascript
 let Employee = {
@@ -532,6 +537,144 @@ function getEmployeeInformation(inputSalary) {
   console.log('Benefits: ' + Employee.getBenefits());
   console.log('Bonus: ' + Employee.calculateBonus());
   console.log('Reimbursement Eligibility: ' + Employee.reimbursementEligibility() + '\n');
+}
+
+getEmployeeInformation(10000);
+getEmployeeInformation(50000);
+getEmployeeInformation(100000);
+```
+
+### Work Around Two
+
+employee.js
+
+```JavaScript
+let Employee = {
+  salary: 100000
+};
+
+
+let payGrades = {
+  entryLevel: { taxMultiplier: .05, benefits: ['health'], minSalary: 10000, maxSalary: 49999 },
+  midLevel: { taxMultiplier: .1, benefits: ['health', 'housing'], minSalary: 50000, maxSalary: 99999 },
+  seniorLevel: { taxMultiplier: .2, benefits: ['health', 'housing', 'wellness', 'gym'], minSalary: 100000, maxSalary: 200000 }
+};
+
+function getCadre() {
+  if (Employee.salary >= payGrades.entryLevel.minSalary && Employee.salary <= payGrades.entryLevel.maxSalary) {
+    return 'entryLevel';
+  } else if (Employee.salary >= payGrades.midLevel.minSalary && Employee.salary <= payGrades.midLevel.maxSalary) {
+    return 'midLevel';
+  } else return 'seniorLevel';
+}
+
+function calculateTax() {
+  return payGrades[getCadre()].taxMultiplier * Employee.salary;
+}
+
+function getBenefits() {
+  return payGrades[getCadre()].benefits.join(', ');
+}
+
+
+function calculateBonus() {
+  return .02 * Employee.salary;
+}
+
+function reimbursementEligibility() {
+  let reimbursementCosts = { health: 5000, housing: 8000, wellness: 6000, gym: 12000 };
+  let totalBenefitsValue = 0;
+  let employeeBenefits = payGrades[getCadre()].benefits;
+  for (let i = 0; i < employeeBenefits.length; i++) {
+    totalBenefitsValue += reimbursementCosts[employeeBenefits[i]];
+  }
+  return totalBenefitsValue;
+}
+
+export {Employee, getCadre as cadre, calculateTax as tax, getBenefits as benefits,calculateBonus as bonus, reimbursementEligibility as reimbursement } ;
+```
+workAround.js
+```javascript
+import {Employee, cadre, tax, benefits, bonus, reimbursement
+} from './employee.js'
+
+
+function getEmployeeInformation(inputSalary) {
+  Employee.salary = inputSalary;
+  console.log('Cadre: ' + cadre());
+  console.log('Tax: ' + tax());
+  console.log('Benefits: ' + benefits());
+  console.log('Bonus: ' + bonus());
+  console.log('Reimbursement Eligibility: ' + reimbursement() + '\n');
+}
+
+getEmployeeInformation(10000);
+getEmployeeInformation(50000);
+getEmployeeInformation(100000);
+```
+
+### Work Around Three
+Employee.js
+
+```javascript
+let Employee = {
+  salary: 100000
+};
+
+
+let payGrades = {
+  entryLevel: { taxMultiplier: .05, benefits: ['health'], minSalary: 10000, maxSalary: 49999 },
+  midLevel: { taxMultiplier: .1, benefits: ['health', 'housing'], minSalary: 50000, maxSalary: 99999 },
+  seniorLevel: { taxMultiplier: .2, benefits: ['health', 'housing', 'wellness', 'gym'], minSalary: 100000, maxSalary: 200000 }
+};
+
+export function getCadre() {
+  if (Employee.salary >= payGrades.entryLevel.minSalary && Employee.salary <= payGrades.entryLevel.maxSalary) {
+    return 'entryLevel';
+  } else if (Employee.salary >= payGrades.midLevel.minSalary && Employee.salary <= payGrades.midLevel.maxSalary) {
+    return 'midLevel';
+  } else return 'seniorLevel';
+}
+
+export function calculateTax() {
+  return payGrades[getCadre()].taxMultiplier * Employee.salary;
+}
+
+export function getBenefits() {
+  return payGrades[getCadre()].benefits.join(', ');
+}
+
+
+export function calculateBonus() {
+  return .02 * Employee.salary;
+}
+
+export function reimbursementEligibility() {
+  let reimbursementCosts = { health: 5000, housing: 8000, wellness: 6000, gym: 12000 };
+  let totalBenefitsValue = 0;
+  let employeeBenefits = payGrades[getCadre()].benefits;
+  for (let i = 0; i < employeeBenefits.length; i++) {
+    totalBenefitsValue += reimbursementCosts[employeeBenefits[i]];
+  }
+  return totalBenefitsValue;
+}
+
+export default Employee ;
+```
+workAround.js
+```javascript
+import {getCadre, calculateTax, getBenefits, calculateBonus, reimbursementEligibility } from './employee';
+
+import Employee from './employee';
+
+
+function getEmployeeInformation(inputSalary) {
+  Employee.salary = inputSalary;
+  console.log('Cadre: ' + getCadre());
+  console.log('Tax: ' + calculateTax());
+  console.log('Benefits: ' + getBenefits());
+  console.log('Bonus: ' + calculateBonus());
+  console.log('Reimbursement Eligibility: ' + reimbursementEligibility() + '\n');
 }
 
 getEmployeeInformation(10000);
