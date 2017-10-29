@@ -12,6 +12,11 @@
 > - [Events in JSX](#events-in-jsx)
 
 #### JSX Elements
+- A JSX element renders.
+- The entire virtual DOM updates.
+- The virtual DOM "diffs," comparing its current self with its previous self.
+- Part of the real DOM updates.
+- The screen looks different than it used to.
 ```javascript 
 // Elelment One
 const h1 = <h1> Hello World </h1>;
