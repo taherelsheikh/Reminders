@@ -971,7 +971,7 @@ displayAirplane();
 ```
 
 ##### export default
-This is similar to module.exports
+This is similar to module.exports but with the new JS syntax
 
 ```javascript
 let Airplane = {};
@@ -988,4 +988,29 @@ Airplane.availableAirplanes = [
 
 export default Airplane;
 ```
+
+#### import 
+This is similar to require but with the new JS syntax
+
+```javascript
+// Airplane specifies the name of the variable to store the default export in.
+
+import Airplane from './airplane'; 
+
+function displayFuelCapacity() {
+Airplane.availableAirplanes.forEach(function(element){
+  console.log(`Fuel Capacity of ${element.name} : ${element.fuelCapacity}`);
+  });
+}
+
+displayFuelCapacity();
+```
+
+
+
+
+
+
+
+
 
