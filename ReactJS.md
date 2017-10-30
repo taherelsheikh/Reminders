@@ -17,6 +17,7 @@
 ## React Outline  
 
 - [JSX](#jsx) 
+- [Components](#components)
 
 
 ## JSX
@@ -213,9 +214,89 @@ const peopleLis = people.map(person =>
 ReactDOM.render(<ul>{peopleLis}</ul>, document.getElementById('app'));
 ```
 
+## Components 
+- [Create a component](#create-a-component)
+- [Render Function](#render-function)
+- [Component](#component)
+- [Conditional Render](#conditional-render)
+
+#### Create a Component
+
+```javascript 
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class MyComponentClass extends React.Component {
+ 
+}
+```
+
+##### Render Funtion 
+```javascript 
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class MyComponentClass extends React.Component {
+  render() {
+    return ( <h1>Hello world</h1>);
+  }
+}
+```
+
+###### Component 
+```javascript 
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 
+const owl = {
+  title: "Excellent Owl",
+  src: "https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-owl.jpg"
+};
 
+// Component class starts here:
+class Owl extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>
+          {owl.title}
+        </h1>
+        <img src={owl.src} alt={owl.title} /> 
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Owl/>,
+           document.getElementById('app'));
+```
+
+#### Conditional Render 
+
+```javascript 
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const fiftyFifty = Math.random() < 0.5;
+
+// New component class starts here:
+class TonightsPlan extends React.Component {
+  render() {
+    if ({fiftyFifty}) {
+      return (<h1>Tonight I'm going out WOOO</h1>) ;
+    } else {
+      return (<h1>Tonight I'm going to bed WOOO</h1>);
+    }
+  }
+}
+
+
+ReactDOM.render(
+	<TonightsPlan />,
+	document.getElementById('app')
+);
+```
 
 
 
