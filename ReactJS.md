@@ -21,13 +21,13 @@
 
 
 ## JSX
-> - [JSX Elements](#jsx-elements)
-> - [Render an element](#render-an-element)
-> - [Variable Attributes JSX](#variable-attributes-jsx)
-> - [Events in JSX](#events-in-jsx)
-> - [Conditionals JSX](#conditionals-jsx)
-> - [&& Conditionals](#&&-conditionals)
-> - [map in JSX](#map-in-jsx)
+- [JSX Elements](#jsx-elements)
+- [Render an element](#render-an-element)
+- [Variable Attributes JSX](#variable-attributes-jsx)
+- [Events in JSX](#events-in-jsx)
+- [Conditionals JSX](#conditionals-jsx)
+- [&& Conditionals](#&&-conditionals)
+- [map in JSX](#map-in-jsx)
 
 #### JSX Elements
 ```javascript 
