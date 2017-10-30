@@ -20,6 +20,9 @@
 > * [Work Around Two](#work-around-two)
 > * [Work Around Three](#work-around-three)
 
+## React Projects
+### Components
+> * [Authorization Form](#authorization-form)
 <br>
 
 
@@ -680,4 +683,62 @@ function getEmployeeInformation(inputSalary) {
 getEmployeeInformation(10000);
 getEmployeeInformation(50000);
 getEmployeeInformation(100000);
+```
+
+### Authorization Form
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      password: 'swordfish',
+      authorized: false
+    };
+    this.authorize = this.authorize.bind(this);
+  }
+
+  authorize(e) {
+    const password = e.target.querySelector(
+      'input[type="password"]').value;
+    const auth = password == this.state.password;
+    this.setState({
+      authorized: auth
+    });
+  }
+
+  render() {
+    const login = (
+        <form action="#" onSubmit={this.authorize}>
+        <input
+          type="password"
+          placeholder="Password"/>
+        <input type="submit" />
+        </form>)
+    const contactInfo = (        
+        <ul>
+          <li>
+            client@example.com
+          </li>
+          <li>
+            555.555.5555
+          </li>
+        </ul>);
+    return (
+      <div id="authorization">
+        <h1>
+          {this.state.authorized ? 'Contact' : 'Enter the Password'}
+  { this.state.authorized ? contactInfo : login }        </h1>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Contact />,
+  document.getElementById('app')
+);
 ```
