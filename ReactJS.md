@@ -334,9 +334,10 @@ class Button extends React.Component {
 ReactDOM.render(<Button />, document.getElementById('app'));
 ```
 
-### Props
+## Props
 props are used to pass info across component. The most common use of props is to pass information to a component
-> - Render a Component's props
+- Render a Component's props
+- Pass props From Component To Component
 
 ##### Render a Component's props
 ```javascript
@@ -351,6 +352,46 @@ class Greeting extends React.Component {
 
 ReactDOM.render(
   <Greeting firstName='Taher' />, 
+  document.getElementById('app')
+);
+```
+
+##### Pass props From Component To Component
+<br> 
+Greetings.js
+```javascript
+import React from 'react';
+
+export class Greeting extends React.Component {
+  render() {
+    return <h1>Hi there, {this.props.name}!</h1>;
+  }
+}
+```
+Apps.js
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Greeting } from './Greeting';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>
+          Hullo and, "Welcome to The Newzz," "On Line!"
+        </h1>
+        <Greeting name="Ruby" />
+        <article>
+          Latest newzz:  where is my phone?
+        </article>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <App />, 
   document.getElementById('app')
 );
 ```
