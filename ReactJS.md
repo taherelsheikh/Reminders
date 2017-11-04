@@ -18,6 +18,7 @@
 
 - [JSX](#jsx) 
 - [Components](#components)
+- [Props](#Props)
 
 
 ## JSX
@@ -333,7 +334,26 @@ class Button extends React.Component {
 ReactDOM.render(<Button />, document.getElementById('app'));
 ```
 
+### Props
+props are used to pass info across component. The most common use of props is to pass information to a component
+> - Render a Component's props
 
+##### Render a Component's props
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hi there, {this.props.firstName}</h1>;
+  }
+}
+
+ReactDOM.render(
+  <Greeting firstName='Taher' />, 
+  document.getElementById('app')
+);
+```
 
 
 
