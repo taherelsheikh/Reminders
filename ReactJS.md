@@ -340,6 +340,7 @@ props are used to pass info across component. The most common use of props is to
 - Pass props From Component To Component
 - Receive an Event Handler as a prop
 - defaultProps
+- this.props.children
 
 
 ##### Render a Component's props
@@ -467,5 +468,6 @@ ReactDOM.render(
 );
 ```
 
-
+##### this.props.children
+> This displays all the data within two tags 
 
