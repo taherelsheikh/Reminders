@@ -339,6 +339,7 @@ props are used to pass info across component. The most common use of props is to
 - Render a Component's props
 - Pass props From Component To Component
 - Receive an Event Handler as a prop
+- defaultProps
 
 
 ##### Render a Component's props
@@ -439,6 +440,31 @@ export class Button extends React.Component {
     );
   }
 }
+```
+
+##### defaultProps
+> this prints a button
+```javascript 
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class Button extends React.Component {
+  render() {
+    return (
+      <button>
+        {this.props.text}
+      </button>
+    );
+  }
+}
+
+// defaultProps goes here:
+Button.defaultProps = { text: 'I am a button' };
+
+ReactDOM.render(
+  <Button />, 
+  document.getElementById('app')
+);
 ```
 
 
