@@ -357,7 +357,7 @@ ReactDOM.render(
 ```
 
 ##### Pass props From Component To Component
-<br> 
+
 Greetings.js
 ```javascript
 import React from 'react';
@@ -368,6 +368,7 @@ export class Greeting extends React.Component {
   }
 }
 ```
+
 Apps.js
 ```javascript
 import React from 'react';
