@@ -338,6 +338,8 @@ ReactDOM.render(<Button />, document.getElementById('app'));
 props are used to pass info across component. The most common use of props is to pass information to a component
 - Render a Component's props
 - Pass props From Component To Component
+- Receive an Event Handler as a prop
+
 
 ##### Render a Component's props
 ```javascript
@@ -395,6 +397,48 @@ ReactDOM.render(
   <App />, 
   document.getElementById('app')
 );
+```
+
+##### Receive an Event Handler as a prop
+Talker.js
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Button } from './Button';
+
+class Talker extends React.Component {
+  talk() {
+    let speech = '';
+    for (let i = 0; i < 10000; i++) {
+      speech += 'blah ';
+    }
+    alert(speech);
+  }
+  
+  render() {
+    return <Button talk={this.talk}/>;
+  }
+}
+
+ReactDOM.render(
+  <Talker />,
+  document.getElementById('app')
+);
+```
+Button.js
+```javascript
+import React from 'react';
+
+export class Button extends React.Component {
+  render() {
+    return (
+      <button onClick={this.props.talk} >
+        Click me!
+      <button />
+
+    );
+  }
+}
 ```
 
 
