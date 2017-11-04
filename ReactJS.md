@@ -18,7 +18,8 @@
 
 - [JSX](#jsx) 
 - [Components](#components)
-- [Props](#Props)
+- [Props](#props)
+- [State](#state)
 
 
 ## JSX
@@ -470,4 +471,95 @@ ReactDOM.render(
 
 ##### this.props.children
 > This displays all the data within two tags 
+- 
 
+
+## State
+- [Setting Initial State](#setting-initial-state)
+- Access a componenets state is similar to props 
+- Update state with this.setstate
+- [Set State](#set-state)
+
+##### Setting Initial State
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class App extends React.Component {
+	// constructor method begins here:
+  constructor(props) {
+    super(props);
+    this.state = { title: 'Best App' };
+  }
+	
+  render() {
+    return (
+      <h1>
+        Wow this entire app is just an h1.
+      </h1>
+    );
+  }
+}
+```
+
+##### Access a componenets state is similar to props 
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class App extends React.Component {
+	// constructor method begins here:
+  constructor(props) {
+    super(props);
+    this.state = { title: 'Best App' };
+  }
+	
+  render() {
+    return (
+      <h1>
+        {this.state.title}
+      </h1>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('app'));
+```
+
+##### Update state with this.setstate
+```javascript 
+this.setState({ hungry: true });
+```
+
+##### Set State 
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const green = '#39D1B4';
+const yellow = '#FFD712';
+
+class Toggle extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { color: green };
+      this.changeColor = this.changeColor.bind(this);
+    }
+  
+  changeColor() {
+    this.setState({ color: yellow });
+  }
+  
+  render() {
+    return (
+      <div style={{background: this.state.color}}>
+        <button onClick = {this.changeColor}>
+        Change color
+        </button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Toggle />, document.getElementById('app'));
+```
