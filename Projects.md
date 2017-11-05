@@ -23,7 +23,6 @@
 ## React Projects
 ### Components
 > * [Authorization Form](#authorization-form)
-<br>
 ### States and Props
 > * [Random Color Picker](#random-color-picker)
 
