@@ -615,6 +615,8 @@ ReactDOM.render(<Parent />,
 - A React component should use state to store information that the component itself can change
 
 ##### Passing info 1
+> In the last lesson, you passed information from a stateful, parent component to a stateless, child component.
+<br>
 Child.js
 ```javascript
 import React from 'react';
