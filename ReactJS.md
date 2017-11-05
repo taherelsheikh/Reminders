@@ -618,6 +618,7 @@ ReactDOM.render(<Parent />,
 > In the last lesson, you passed information from a stateful, parent component to a stateless, child component.
 <br>
 Child.js
+
 ```javascript
 import React from 'react';
 
@@ -627,7 +628,9 @@ export class Child extends React.Component {
   }
 }
 ```
+
 Parent.js
+
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
