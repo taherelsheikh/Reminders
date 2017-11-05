@@ -20,6 +20,7 @@
 - [Components](#components)
 - [Props](#props)
 - [State](#state)
+- [Passing Info](#passing-info)
 
 
 ## JSX
@@ -606,3 +607,40 @@ class Parent extends React.Component {
 ReactDOM.render(<Parent />, 
                document.getElementById('app'))
 ```
+
+## Passing info
+- That means that a Parent is going to render a Child. Rendering is the only way for a component to pass props to another component
+- Any component rendered by a different component must be included in an export statement.
+- A React component should use props to store information that can be changed, but can only be changed by a different component.
+- A React component should use state to store information that the component itself can change
+
+##### Passing info 1
+Child.js
+```javascript
+import React from 'react';
+
+export class Child extends React.Component {
+  render() {
+    return <h1>Hey, my name is {this.props.name}!</h1>;
+  }
+}
+```
+Parent.js
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Child } from './Child';
+
+class Parent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: 'Frarthur' };
+  }
+
+  render() {
+    return <Child name={this.state.name} />;
+  }
+}
+ReactDOM.render(<Parent />, document.getElementById('app'));
+```
+
