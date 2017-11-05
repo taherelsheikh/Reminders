@@ -652,6 +652,9 @@ ReactDOM.render(<Parent />, document.getElementById('app'));
 ##### Passing info 2
 
 - Make child component update its parent's
+- In lesson 2, you learned that lesson 1's pattern is actually part of a larger pattern: a stateful, parent component passes down an event handler to a stateless, child component. The child component then uses that event handler to update its parent's state.
+- child.js             child.js            parent.js                   child.js          child.js
+- In select onChange > this.handleChange > this.props.onChange(name) > this.changeName > this.setState 
 
 <br>
 
