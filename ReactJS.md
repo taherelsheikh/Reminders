@@ -615,7 +615,7 @@ ReactDOM.render(<Parent />,
 - A React component should use state to store information that the component itself can change
 
 ##### Passing info 1
-> In the last lesson, you passed information from a stateful, parent component to a stateless, child component.
+> Pass information from a stateful, parent component to a stateless, child component.
 <br>
 Child.js
 
@@ -649,3 +649,87 @@ class Parent extends React.Component {
 ReactDOM.render(<Parent />, document.getElementById('app'));
 ```
 
+##### Passing info 2
+
+- Make child component update its parent's
+
+<br>
+
+Parent.js
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Child } from './Child';
+
+class Parent extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { name: 'Frarthur' };
+    // Step 2 
+    this.changeName = this.changeName.bind(this);
+  }
+  
+  // Step 1 
+  changeName(newName) {
+    this.setState({
+      name: newName
+    });
+  }
+
+  render() {
+    // Step 3
+    return <Child name={this.state.name} onChange={this.changeName} />
+  }
+}
+
+ReactDOM.render(
+	<Parent />,
+	document.getElementById('app')
+);
+```
+
+Child.js
+
+```javascript
+import React from 'react';
+
+export class Child extends React.Component {
+  // step 5 
+  constructor(props) {
+    super(props);
+  // step 6   
+    this.handleChange = this.handleChange.bind(this);
+  }
+ 
+  // step 4 
+  handleChange(e) {
+    const name = e.target.value;
+    this.props.onChange(name);
+  }
+
+  render() {
+    // step 7
+    return (
+      <div>
+        <h1>
+          Hey my name is {this.props.name}!
+        </h1>
+        <select id="great-names" onChange={this.handleChange}>
+          <option value="Frarthur">
+            Frarthur
+          </option>
+
+          <option value="Gromulus">
+            Gromulus
+          </option>
+
+          <option value="Thinkpiece">
+            Thinkpiece
+          </option>
+        </select>
+      </div>
+    );
+  }
+}
+```
