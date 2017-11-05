@@ -830,6 +830,10 @@ export class Button extends React.Component {
 ```
 
 ### Video Player
+> App passes down this.state.src to Video. Video uses this info to display the chosen video. App also passes down the ability to change this.state.src to Menu. Menu uses this ability to let a user to select a new video.
+
+<br>
+
 App.js
 
 ```javascript
