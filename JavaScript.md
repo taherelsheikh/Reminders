@@ -25,6 +25,7 @@
 - [Objects](#objects)
 - [Classes](#classes)
 - [Browser Compatiblity](#browser-compatiblity)
+- [Requests](#requests)
 - [JS Cheat Sheet](https://www.codecademy.com/articles/bwa-javascript-reference)
 
 # JavaScript Tools
@@ -1136,6 +1137,149 @@ import { specialty, isVegetarian, isLowSodium } from './menu';
 import GlutenFree from './menu';
 ```
 
+### Requests
+- GET
+- POST
+- fecth GET request
+- fecth POST request
+- async GET Requests
+- async POST Requests
+
+> jQuery provides other helper methods that can further reduce boilerplate such as `$.get()`, `$.post()`, and `$.getJSON()`
+
+- GET - [codeacademy link](https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/diagram3.svg)
+
+```javascript
+$.ajax({
+  url: 'https://api-to-call.com/endpoint',
+  type: 'GET',
+  dataType: 'json',
+  
+  success(response) {
+    console.log(response)
+  },
+  
+  error(jqXHR, status, errorThrown) {
+ console.log(jqXHR)
+  } 
+})
+```
+
+- POST - [codeacademy link](https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/diagram4.svg)
+
+```javascript
+$.ajax({
+  url: 'https://api-to-call.com/endpoint',
+  type: 'POST',
+  data: JSON.stringify({id: 200}),
+  dataType: 'json',
+  
+  success(response) {
+    console.log(response)
+  },
+  
+  error(jqXHR, status, errorThrown) {
+    console.log(jqXHR)
+  }
+})
+```
+
+- GET - an easier method 
+
+```javascript 
+  $.getJSON(urlToExpand, response => {
+  	$responseField.append('<p>Your expanded url is: </p><p>' +
+  	response.longUrl + '</p>');
+	});
+```
+
+- POST - an easier method 
+
+```javascript 
+ $.post({
+    url: urlWithKey,
+    data: JSON.stringify({longUrl: urlToShorten}), 
+    dataType: 'json', 
+    contentType: 'application/json', 
+    success(response) {
+      $responseField.append('<p>Your shortened url is: </p><p>' + response.id + '</p>');
+    },
+    error(jqXHR, status, errorThrown) {
+      console.log(jqXHR);
+```
+
+- fetch get 
+
+> `fetch()` is a web API that can be used to create requests. `fetch()` will return Promises
+
+```javascript 
+fetch('https://api-to-call.com/endpoint').then(response => {
+  if (response.ok) {
+    return response.json()
+  }
+c}, 
+  networkError => console.log(networkError.message)
+  ).then(jsonResponse => jsonResponse)
+```
+
+- fecth POST request - [codeacademy link](https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/diagram6.svg)
+
+```javascript 
+fetch('https://api-to-call.com/endpoint', 
+      {
+      method: 'POST',
+      body: JSON.stringify({id: '200'})
+      }
+     ).then(response => { 
+                if (response.ok) {
+                                  return response.json()
+                                   } 
+                throw new Error("Request failed!")
+                            }, 
+            networkError => console.log(networkError.message)
+     ).then(jsonResponse => jsonResponse)
+```
+
+- async GET Requests - [code academy link](#https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/diagram7.svg)
+
+> - `async` is a keyword that is used to create functions that will return Promises.
+> - `await` is a keyword that is used to tell a program to continue moving through the message queue while a Promise resolves
+> - `await` can only be used within functions declared with `async`
+
+```javascript 
+async function getData() {
+  try {
+    let response = await fetch('https://api-to-call.com/endpoint')
+    if (response.ok) {
+      let jsonResponse = await response.json()
+      return jsonResponse
+    }
+    throw new Error('Request failed!')
+  } catch (error) {
+    console.log(error)
+  }
+}
+```
+
+- async POST Request - [code academy link](https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/diagram8.svg)
+
+```javascript 
+async function getData() {
+  try {
+    let response = await fetch ('https://api-to-call.com/endpoint',
+                                {method: 'POST',
+                                body: JSON.stringify({id: 200}) }
+                                 )
+    if (response.ok) {
+      let jsonResponse = await response.json()
+      return jsonResponse
+    } throw new Error('Request failed!')
+    
+  } catch (error) {
+    console.log(error)
+  }
+}
+```
 
 
 
