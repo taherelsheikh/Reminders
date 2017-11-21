@@ -1208,7 +1208,7 @@ $.ajax({
       console.log(jqXHR);
 ```
 
-- fetch get 
+- fetch get - [codeacademy link](https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/diagram5.svg)
 
 > `fetch()` is a web API that can be used to create requests. `fetch()` will return Promises
 
@@ -1240,7 +1240,7 @@ fetch('https://api-to-call.com/endpoint',
      ).then(jsonResponse => jsonResponse)
 ```
 
-- async GET Requests - [code academy link](#https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/diagram7.svg)
+- async GET Requests - [codeacademy link](https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/diagram7.svg)
 
 > - `async` is a keyword that is used to create functions that will return Promises.
 > - `await` is a keyword that is used to tell a program to continue moving through the message queue while a Promise resolves
