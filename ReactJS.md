@@ -3,7 +3,7 @@
 </p>
 
 
-# React 
+# React - [Cheat Sheet](https://www.codecademy.com/articles/bwa-react-reference)
 
 #### This is how React works
 - A JSX element renders.
