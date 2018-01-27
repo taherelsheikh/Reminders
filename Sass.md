@@ -10,3 +10,20 @@ $standard-border: 4px solid black;
   height: $icon-square-length;
 }
 ```
+
+main.scss
+- hidden is the default value 
+- change default by writing @include backface-visibility(not-hidden) in the end
+```
+@mixin backface-visibility($visibility: hidden) {
+  backface-visibility: $visibility;
+  -webkit-backface-visibility: $visibility;
+  -moz-backface-visibility: $visibility;
+  -ms-backface-visibility: $visibility;
+  -o-backface-visibility: $visibility;
+}
+
+.front, .back {
+    @include backface-visibility;
+}
+```
