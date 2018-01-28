@@ -2,10 +2,11 @@
 ```
 mkdir INTUIT APP
 cd INTUIT\ /APP
-virtualenv env
+virtualenv venv
+. venv/bin/activate
 ```
 
 - activate env
 ```
-source venv/bin/activate
+pip install flask  
 ```
