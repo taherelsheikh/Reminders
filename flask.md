@@ -1,5 +1,5 @@
 - create env 
-```
+```sh
 mkdir INTUIT APP
 cd INTUIT\ /APP
 virtualenv venv
@@ -7,12 +7,12 @@ virtualenv venv
 ```
 
 - activate env
-```
+```sh
 pip install flask  
 ```
 
 - run flask app - http://127.0.0.1:5000/
-```
+```sh
 cd Flask
 python hello.py
 ```
@@ -20,7 +20,7 @@ python hello.py
 - example
 - post to ```http://127.0.0.1:5000/testingPost``` this ```{"Taher": "Boy", "Mona": "Girl"}``` which will show ```"Boy"```
 
-```
+```python
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
