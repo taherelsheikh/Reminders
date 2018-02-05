@@ -1,3 +1,13 @@
+- Kill all servers still running in App.py
+```
+// get a list of process number 
+ps aux | grep App.py
+
+// ex process-number 53985
+kill -9 PROCESS-NUMBER
+```
+
+
 - create env 
 ```sh
 mkdir INTUIT APP
