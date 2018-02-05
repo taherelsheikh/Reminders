@@ -7,6 +7,10 @@ ps aux | grep App.py
 kill -9 PROCESS-NUMBER
 ```
 
+- Stop flask server from running 
+```
+control + C
+```
 
 - create env 
 ```sh
