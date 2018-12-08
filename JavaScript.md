@@ -106,6 +106,8 @@ checkInventory(order)
   console.log(errorMessage);
 });
 ```
+concurrency, multiple asynchronous operations happening together
+
 <br>
 
 #### Data Types
