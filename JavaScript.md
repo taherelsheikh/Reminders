@@ -36,7 +36,7 @@
 
 <br>
 
-#### Promises
+#### [Promises](https://www.codecademy.com/courses/asynchronous-javascript/lessons/promises/exercises/review?action=resume_content_item)
 
 
 ```javascript
