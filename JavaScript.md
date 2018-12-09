@@ -129,6 +129,21 @@ Promise.all([checkSunglasses, checkPants, checkBags])
   .then(onFulfill)
   .catch(onReject);
 ```
+
+```js
+function nativePromise(){
+  return new Promise((resolve, reject) => {
+      resolve('yay!');
+    }
+  })
+}
+
+// same as the below aync function 
+async function asyncPromise(){
+  return 'yay!';
+}
+
+```
 <br>
 
 #### Data Types
