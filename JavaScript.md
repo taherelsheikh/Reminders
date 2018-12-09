@@ -144,6 +144,7 @@ async function asyncPromise(){
 }
 
 ```
+https://www.codecademy.com/courses/asynchronous-javascript/lessons/async-await/exercises/review?action=resume_content_item
 ```js
 async function waiting() {
  const firstValue = await firstAsyncThing();
