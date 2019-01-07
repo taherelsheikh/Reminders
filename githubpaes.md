@@ -1,7 +1,7 @@
 
 steps needed
 - create a react app 
-- create a repo ex mysodeprject 
+- create a repo `ex mysodeprject`
 - npm install gh-pages
 - in package.json
  > - `"homepage": "https://taherelsheikh.github.io/mysideproject/"`
